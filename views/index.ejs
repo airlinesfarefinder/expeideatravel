@@ -1057,7 +1057,7 @@
                </a>
                     </div>
                 </div>
-                <div class="package_con">
+                <!-- <div class="package_con">
                     <div class="item_dest">
                         <a href="#">
                   <img src="images/lasvegas0.jpg" class="img-fluid">
@@ -1067,7 +1067,7 @@
                   </div>
                </a>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -1389,7 +1389,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;display=swap" rel="stylesheet">
 
-    <style>
+    <!-- <style>
         .greatAirfarespopUp .airlinerLogo {
             padding: 0px 34px !important;
             padding-bottom: 0px !important;
@@ -2172,307 +2172,276 @@
                 font-size: 24px;
             }
         }
-    </style>
+    </style> -->
+
+
+    <div id="boxes" class="col-sm-6 col-sm-offset-3">
+        <a href="tel:+1-888-402-4996">
+           <div class="d-block d-md-block d-lg-none">
+              <div class="modal fade show custompopup" style="display: block;">
+                 <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content pt-0">
+                       <div class="modal-footer border-0">
+                           <p  onclick="myFunction1()" class="btn-secondary">
+                           <i class="fa fa-close " aria-hidden="true"></i></p>
+                           
+                           </div>
+                       <div class="popup-content">
+                          <img alt="Logo" class="header-logo" loading="lazy" width="120" height="40" decoding="async" data-nimg="1" style="color:transparent" src="images/expedia.png">
+                          <p>Talk to a travel expert and Save 25%</p>
+                          <h2 class="support-no">
+                             <i class="fas fa-headset"></i> <!-- -->+1-888-402-4996<!-- --> 
+                          </h2>
+                          <hr>
+                          <h5>24/7 Reservation Support</h5>
+                          <div class="row justify-content-center">
+                             <div class="col-6 align-self-center"><img alt="Logo" class="" loading="lazy" width="50" height="50" decoding="async" data-nimg="1" style="color:transparent;width:100%;height:auto" sizes="100vw" src="images/left-man.jpg"></div>
+                             <div class="col-6">
+                                <ul class="arrow-list">
+                                   <li>Tickets Booking</li>
+                                   <li>Manage Booking</li>
+                                   <li>Customer Service</li>
+                                   <li>Cancellation</li>
+                                </ul>
+                             </div>
+                             <div class="mt-3 call-offers">
+                                 <img src="images/cal2.gif" style="width:50px; height:50px">
+                                <div>
+                                   <p class="mb-0">Call Us &amp; get Upto <small>40%OFF</small> on Flights</p>
+                                   <h4 class="mb-0">+1-888-402-4996</h4>
+                                </div>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </a>
+         </div>
+        
+
+
+
+
+
     <style>
-        /**** new Design popup****/
+        .d-lg-none {
+              display: none !important;
+          }  
+          
+          #boxes{ display:none;}
+          
+           .modal.fade.show {
+              opacity: 1;
+              padding: 0 !important;
+              overflow: unset;
+              background: rgba(0, 0, 0, .85);
+              text-align: center;    z-index: 9999999999;
+          }   
+      .popup-content {
+          background-color: #fff;
+          margin: 6% auto;
+          padding: 8px;
+          border: 1px solid #00185e;
+          width: 96%;
+          max-width: 375px;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+          border-radius: 8px;
+          text-align: center;
+      }
+      .custompopup .modal-footer.border-0 {
+          margin-top: 0px;
+      }
+      
+      .border-0 {
+          border: 0 !important;
+      }
+      .modal-footer {
+          display: flex;
+          flex-shrink: 0;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: flex-end;
+          padding: calc(var(--bs-modal-padding) - var(--bs-modal-footer-gap)* .5);
+          background-color: var(--bs-modal-footer-bg);
+          border-top: var(--bs-modal-footer-border-width) solid var(--bs-modal-footer-border-color);
+          border-bottom-right-radius: var(--bs-modal-inner-border-radius);
+          border-bottom-left-radius: var(--bs-modal-inner-border-radius);
+      }
+      .pt-0 {
+          padding-top: 0 !important;
+      }
+      
+      .modal-content {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          color: var(--bs-modal-color);
+          pointer-events: auto;
+          background-color: var(--bs-modal-bg);
+          background-clip: padding-box;
+          border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
+          border-radius: var(--bs-modal-border-radius);
+          outline: 0;
+      }
+      .modal-content {
+          background: hsla(0, 0%, 100%, 0) !important;
+      }
+      .modal.show .modal-dialog {
+          transform: none;
+      }
+      .modal.fade .modal-dialog {
+          transition: transform .3s ease-out;
+          transform: translateY(-50px);
+      }
+      @media (max-width: 767px) {
+          .modal.show .modal-dialog {
+              margin: 0;
+          }
+      }
+      .modal-dialog-centered {
+          display: flex;
+          align-items: center;
+          min-height: calc(100% - var(--bs-modal-margin)* 2);
+      }
+      .modal-dialog {
+          position: relative;
+          width: auto;
+          margin: var(--bs-modal-margin);
+          pointer-events: none;
+      }
+      
+      .header-logo {
+          width: auto;
+          margin-bottom: 20px;
+          margin-left: 40px;
+          margin-top: 10px;
+      }
+      .support-no {
+          font-size: 32px;
+          font-weight: 700;
+          color: #ff5722;
+      }
+      hr {
+          width: 100%;
+          height: 3px !important;
+          color: #da552f !important;
+         
+          margin-top: 0 !important;
+          margin: 1rem 0;
+         
+          border: 0;
+          border-top: var(--bs-border-width) solid;
+          opacity: .25;
+      }
+      .justify-content-center {
+          justify-content: center !important;
+      }
+      
+      .row {
+          --bs-gutter-x: 1.5rem;
+          --bs-gutter-y: 0;
+          display: flex;
+          flex-wrap: wrap;
+          margin-top: calc(-1* var(--bs-gutter-y));
+          margin-right: calc(-.5* var(--bs-gutter-x));
+          margin-left: calc(-.5* var(--bs-gutter-x));
+      }
+      .align-self-center {
+          align-self: center !important;
+      }
+      .arrow-list {
+          list-style-type: none;
+          padding: 0;
+          text-align: left;
+          font-weight: 500;
+      }
+      .arrow-list li, .arrow-list li:hover {
+          background: linear-gradient(90deg, #4d8cff, #fff);
+      }
+      
+      .arrow-list li {
+          position: relative;
+          color: #00185e;
+          padding: 1px 0 0 7px !important;
+          margin: 12px 0 !important;
+          cursor: pointer;
+          transition: background .3s;
+          border-radius: 12px 0;
+          
+          font-size: 16px;
+          line-height: 1.9;
+          font-weight: 400;
+      }
+      .call-offers {
+          width: 92%;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          background: #00308D;
+          padding: 10px 15px;
+          border-radius: 5px;
+          color: #fff;
+          text-align: left;
+          margin-top: 12px;
+      }
+      .call-offers h4 {
+          font-size: 24px;
+      }
+      p.mb-0 {
+          font-size: 13px;
+      }
+      p.mb-0 small {
+          color: #fff;
+          background-color: #0f4ab5;
+          border-radius: 5px;
+          padding: 3px;
+          font-weight: 400;
+          letter-spacing: 1px;
+      }
+      .custompopup h4 {
+          margin-top: 10px;
+          color: #fff;
+          font-size: 25px;
+          line-height: 30px;
+          font-weight: 700;
+      }
+      
+      @media (min-width:320px) and (max-width:767px){
+          .d-block {display: block !important;}
+       .btn-secondary {
+              font-size: 14px;
+              font-weight: 600;
+              border-radius: 20px;
+              background: rgba(0, 74, 173, 0) !important;
+              color: #ed942d !important;
+              border: 0;
+              padding: 10px 30px !important;
+              right: -3px !important;
+              position: relative !important;
+              top: 79px !important;
+              border: none !important;
+          }   
+          
+         #boxes{ display:block;} 
+          
+      }    
+          
+      </style>
+   
+   <script>
+    function myFunction1() {
+      var x = document.getElementById("boxes");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+    </script>
 
-        .mob_UTM_Banner_connecting h2 {
-            font-size: 15px;
-            color: #000;
-            width: 100%;
-            padding: 0px;
-            padding-bottom: 0px;
-            margin: 0px;
-            text-align: left;
-        }
-
-        .mob_UTM_Banner_connecting h2 span#span_UTM_Banner_FooterCallText {
-            width: 50%;
-            float: left;
-            font-size: 14px;
-            margin: 0px;
-            margin-top: 0px;
-        }
-
-        .mob_UTM_Banner_connecting h2 span img {
-            max-width: 120px;
-        }
-
-        .mob_UTM_Banner_connecting h3 {
-            font-size: 14px;
-            margin-top: 12px;
-            text-align: left;
-            margin-bottom: 10px;
-        }
-
-        .mob_UTM_Banner_connecting p {
-            font-size: 12px;
-            color: #000;
-            width: 100%;
-            text-align: left;
-            line-height: 18px;
-            font-weight: 500;
-            margin: 0;
-        }
-
-        .mob_UTM_Banner_connecting ul {
-            margin: 5px 0 0 0;
-            padding: 0px;
-            line-height: 28px;
-            list-style: none;
-            font-size: 14px;
-            text-align: left;
-        }
-
-        .mob_UTM_Banner_connecting li {
-            font-size: 12px;
-            color: #000;
-            margin: 0px;
-            padding: 0px;
-            list-style: disc;
-            margin-left: 14px;
-            line-height: 24px;
-            font-weight: 500;
-        }
-
-        .usplst {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-top: 12px;
-            margin-bottom: 7px;
-            position: relative;
-        }
-
-        .usplst div {
-            text-align: center;
-            font-size: 15px;
-            color: #fff;
-            padding: 6px 0 9px 0;
-            width: 45%;
-            font-weight: 400;
-            background-color: #0a3788;
-            border-radius: 20px;
-            margin: 5px 2px;
-            font-family: 'Fira Sans', sans-serif;
-        }
-
-        .usplst a {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        a.svnSpt {
-            font-size: 18px;
-            color: #000;
-            display: block;
-            padding-top: 10px;
-            font-weight: 500;
-            font-family: 'Fira Sans', sans-serif;
-        }
-
-        p.pohlp a {
-            color: #000;
-            font-size: 16px;
-            font-weight: 500;
-            padding-top: 7px;
-            display: block;
-            font-family: 'Fira Sans', sans-serif;
-        }
-
-        .callicons.post {
-            border-radius: 47px;
-            background: #0080FB;
-            display: flex;
-            padding: 4px;
-            margin-right: 10px;
-            margin-left: 7px;
-        }
-
-        .callicons.post h4 span {
-            color: #fff;
-        }
-
-        .callicons.post h4 a {
-            color: #fff;
-        }
-
-        .greatAirfarespopUp .circlePhone {
-            border: solid 5px #fff;
-            height: 58px;
-            width: 58px;
-            background: #0080FB url(../images/callPhone.png) center center no-repeat;
-            margin-left: 7px;
-        }
-
-        .greatAirfarespopUp .close_UTM_Banner_ppForm .btns {
-            font-size: 13px;
-            padding: 1px 9px;
-        }
-
-        .greatAirfarespopUp .girlCalling1 img {
-            border: 4px solid #ccc;
-            border-radius: 50%;
-        }
-
-        .greatAirfarespopUp .girlCalling1 {
-            margin-top: 10px;
-            margin-bottom: 11px;
-            position: relative;
-        }
-
-        .greatAirfarespopUp .close_UTM_Banner_ppForm .cp_UTM_Banner_Form span img {
-            margin-right: 2px;
-            top: 0;
-        }
-
-        .greatAirfarespopUp .flightImage {
-            min-height: unset;
-            margin: 19px 0;
-            padding: 0 20px;
-        }
-
-        .greatAirfarespopUp .airlinerLogo {
-            padding: 10px 34px;
-            padding-bottom: 5px;
-        }
-
-        .greatAirfarespopUp .callicons h4 {
-            padding-top: 14px;
-        }
-
-        .callTxt {
-            font-size: 16px;
-            font-weight: bold;
-        }
-
-        .greatAirfarespopUp .flightImage img {
-            top: 0;
-        }
-
-        .whole-banner-clickable a.wholeClickable {
-            position: absolute;
-            width: 100%;
-            height: 80%;
-            left: 0px;
-            top: 0px;
-            z-index: 10;
-        }
-
-        .gamainPoup a.closeBtns {
-            z-index: 12;
-        }
-
-        .greatAirfarespopUp .newLogoFlex1 {
-            padding: 25px 10px 10px 10px;
-        }
-
-        .newLogoFlex1 {
-            display: flex;
-            padding: 35px 10px 10px 10px;
-            justify-content: space-between;
-        }
-
-        .newLogoFlex1 .siteLogo {
-            max-width: 169px;
-            margin-top: 7px;
-        }
-
-        .newLogoFlex1 .siteLogo img {
-            width: 100%;
-        }
-
-        .gamainCover .newLogoFlex1 .siteNumb {
-            border: solid 1px #000;
-            font-weight: bold;
-            padding: 0 6px 0 12px;
-            height: 22px;
-            color: #000;
-            margin: 8px
-        }
-
-        .gamainCover .newLogoFlex1 .siteNumb a {
-            color: #000;
-        }
-
-        .newLogoFlex1 .siteNumb {
-            font-size: 14px;
-            font-weight: 600;
-            border: solid 1px #008a04;
-            border-radius: 5px;
-            padding: 0 6px 0 12px;
-            position: relative;
-            line-height: 20px;
-        }
-
-        .newLogoFlex1 .siteNumb:before {
-            width: 36px;
-            height: 37px;
-            content: " ";
-            background-image: url(../images/utmCall.png);
-            position: absolute;
-            left: -31px;
-            top: -8px;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-
-        #boxes {
-            display: none;
-        }
-
-        @media (min-width:320px) and (max-width:767px) {
-            .greatAirfarespopUp {
-                display: block;
-            }
-            #boxes {
-                display: block;
-            }
-        }
-    </style>
-
-<div class="greatAirfarespopUp" id="boxes">
-    <button class="closePopup" onclick="closePopup()">
-        <i class="fa fa-times"></i>
-    </button>
-    <div class="gamainCover">
-        <div class="gamainPoup">
-            <!-- Your existing popup content -->
-            <div class="whole-banner-clickable">
-                <a href="tel:(888) 501-0180" class="wholeClickable"></a>
-                <div class="gAcontent">
-                    <h2>Airlines Reservations and Bookings</h2>
-                    <div class="airlinerLogo"><img id="utmpopupSmalllogo" src="images/Airline-Ticket.png" alt="Cheap"></div>
-                    <a href="tel:(888) 501-0180" class="svnSpt">24/7 Reservations & Support</a>
-                    <div class="usplst">
-                        <div>New Booking</div>
-                        <div>Changes</div>
-                        <div>Cancellation</div>
-                        <div>Customer Service</div>
-                        <a href="tel:(888) 501-0180" class="svnSpt">&nbsp;</a>
-                    </div>
-                    <div class="flightImage">
-                        <img id="utmpopuplogo" src="images/airline-gnric-pullu.png">
-                    </div>
-                    <div class="girlCalling1">
-                        <img src="images/calling-cus.png">
-                    </div>
-                    <p class="callTxt">No Hold - Call Answered in 5 Sec</p>
-                    <div class="callicons post">
-                        <a href="tel:(888) 501-0180" class="circlePhone"></a>
-                        <h4>
-                            <a href="tel:(888) 501-0180">(888) 501-0180</a>
-                        </h4>
-                    </div>
-                    <p class="pohlp"><a href="tel:(888) 501-0180">24/7 Helpline</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
     <script>
         function myFunction1() {
             var x = document.getElementById("boxes");
@@ -2950,6 +2919,9 @@
         document.addEventListener("DOMContentLoaded", init, false);
     })();
 </script>
+
+
+
 
 <style>
     .closePopup {

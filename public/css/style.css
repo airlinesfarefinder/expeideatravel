@@ -378,7 +378,7 @@ ul.navbar_st {
 
 img.logo {
     width: 100%;
-    margin: -8px 0 0 0;
+    margin: -11px 0 0 0;
 }
 
 .slider_img {
@@ -647,7 +647,7 @@ p.price22 {
     background-position: 18% 43%;
     background-repeat: no-repeat;
     background-size: cover;
-    background: #007FFC;
+    background: #00308D;
 }
 
 .ftr_bx {}
@@ -728,7 +728,7 @@ ul.dsnp-uladm li.dsnp-liadm {
 
 .footer_btm {
     text-align: center;
-    background: #007FFC;
+    background: #00308D;
     padding: 15px 0;
     color: #fff;
     letter-spacing: 0;
