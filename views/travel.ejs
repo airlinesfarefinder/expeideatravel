@@ -86,7 +86,270 @@
 
 </head>
 <body>
-
+   
+    <style>
+        section.banners {
+          display: none;
+      } 
+      .banners {
+          background-color: #fff;
+          padding: 15px 5px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      .bannerInner {
+          background-color: rgba(255,255,255,0.5);
+          width: 100%;
+          padding: 0 0px 0 0px;
+          text-align: center;
+      }
+      .ringing_phone {
+          animation-name: trin;
+          animation-duration: 1.5s;
+          animation-iteration-count: infinite;
+          animation-timing-function: linear;
+      }
+          .ringing_phone {
+          border: solid 5px #e6effe;
+          border-radius: 50%;
+          height: 60px;
+          width: 60px;
+          background: url(../cm-reservation/images/phoneRotate.png) center center no-repeat;
+          text-align: center;
+          display: inline-block;
+          background-size: 28px;
+      }
+      .clickFull {
+          position: relative;
+      }
+      .clickFull a.ddka {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+      }
+      .airLineimg {
+          margin: 0px 0 5px 0;
+          display: inline-block;
+          width: 100%;
+      }
+      .airLineimg img {
+          width: 100%;
+          margin: 0px 0px;
+      }
+      .bannerInner h1 {
+          color: #191e3b;
+          font-size: 18px;
+          font-weight: 500;
+          margin:4px 0 4px 0;    
+          font-family: 'Fira Sans', sans-serif;
+      }
+      .airlineLlogos {
+          text-align: center;
+          margin-bottom: 10px;
+      }
+      .airlineLlogos img {
+         width: 100%;
+         margin: 0px 0px;
+      }
+      .banners .bannerInner ul {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-bottom: 2px solid #1a3e6e;
+          padding-bottom: 4px;
+          margin-bottom: 20px;
+          margin-top: 20px;
+      }
+      .banners .bannerInner ul {
+          border-bottom: 2px solid #e01933;
+          padding: 0px;
+          list-style: none;
+      }
+      .banners .bannerInner ul li {
+          color: #000;
+          font-size: 14px;
+          background-image: url(../cm-reservation/images/checkIcons.png);
+          background-repeat: no-repeat;
+          background-position: left center;
+          padding-left: 18px;
+          font-weight: 500;
+          margin: 0;
+          font-family: 'Fira Sans', sans-serif;
+      }
+      .bannerInner h2 {
+          margin: 0;
+          padding: 0;
+          font-weight: 500;
+          font-size: 18px;
+      }
+      .bannerInner .numbers {
+          background: #00308D;
+          border: 0;
+          margin-top: 5px;
+          padding: 3px;
+          background-color: #00308D;
+          position: relative;
+      }
+      .bannerInner .clickFull .numbers {
+          border-radius: 50px;
+      }
+      .bannerInner .numbers a {
+          color: #191e3b;
+          font-size: 27px;
+          font-weight: 600;
+          padding: 0 5px 0 5px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-family: 'Fira Sans', sans-serif;
+      }
+        span.nbrs {
+          text-align: left;
+          color: #faf8fd;font-size: 25px;
+      }  
+      .bannerInner .numbers a span.nbrs small {
+          font-size: 15px;
+          display: block;
+          text-align: left;
+          font-weight: 500;
+          position: relative;
+          top: 3px;color: #f4f7f6;
+          font-family: 'Fira Sans', sans-serif;
+      }
+      .bannerInner hr {
+          border-color: rgb(46 46 46 / 30%);
+          margin: 20px 0 5px 0;
+      }
+      
+      hr {
+          margin-top: 20px;
+          margin-bottom: 20px;
+          border: 0;
+          border-top: 1px solid #eee;
+      }
+      
+      .airLineimg h1 {
+          color: #fdfdfd;
+          font-size: 19px;
+          font-weight: 500;
+          margin: 0px 0px;
+          font-family: 'Fira Sans', sans-serif;
+          background: #00308D;
+          padding: 11px 0px;
+      }
+      
+      .girlCalling {
+          margin-top: 10px;
+          margin-bottom: 11px;
+          position: relative;
+      }
+      .girlCalling img {
+          border-radius: 50%;
+          border: solid 4px #0f4ab5;
+      }
+      .bannerInner h2 a {
+          color: #e01933;
+          font-size: 20px;
+          font-family: 'Fira Sans', sans-serif;
+      }
+      .bannerInner h2 p {
+          margin: 10px 0px!important;
+              font-size: 18px;
+          font-weight: 400;
+          font-family: 'Fira Sans', sans-serif;
+          color:#000;
+      }
+      .blink {animation: blinker 1.3s linear infinite;}
+      
+      .bannerInner h1 span a {
+          line-height: 29px;
+          color: #191e3b;
+          font-size: 17px;
+      }
+      .bannerInner h1 span {
+          color: #191e3b;
+          font-size: 18px;
+          font-weight: 600;
+          margin: 0 0 20px 0;
+          font-family: 'Fira Sans', sans-serif;
+          background: #f58c14;
+          padding: 8px 12px;
+          border-radius: 15px;
+      }
+      .dss-call2 {
+          margin: 15px 20px;
+          font-size: 18px;
+          font-weight: 600;
+          font-family: 'Fira Sans', sans-serif;
+      }
+      .dss-call2 a {
+          color: #000;
+      }
+      ul.list-view-items1 {
+          list-style-type: none;
+          display: flex;
+          flex-wrap: wrap;
+          padding: 0;
+          justify-content: space-between;
+          border-bottom: 0px solid #e01933!important;
+          margin-bottom: 3px!important;
+          margin-top: 2px!important;
+      }
+      ul.list-view-items1 li {
+          color: #fff!important;
+          width: 49%;
+          text-align: center;
+          font-size: 16px!important;
+          line-height: 26px;
+          font-weight: 400!important;
+          background: #0f4ab5!important;
+          margin-bottom: 18px!important;
+          padding: 5px 0px;
+          border-radius: 4px;
+          font-family: 'Fira Sans', sans-serif;
+      }
+      p.mt-3.tt_btm {
+          color: #000;
+          font-size: 16px;
+          font-family: 'Fira Sans', sans-serif;
+          font-weight: 600;
+          line-height: 28px;
+          text-align: center;
+      }
+      
+      @keyframes blinker {50% {opacity: 0;}}
+      
+      @keyframes trin {
+          from {
+              transform:rotate3d(0, 0, 1, 0deg);
+          }
+          20%, 32%, 44%, 56%, 68% {
+              transform: rotate3d(0, 0, 1, 0deg);
+          }
+          23%, 35%, 47%, 59%, 71% {
+              transform: rotate3d(0,0,1,15deg);
+          }
+          26%, 38%, 50%, 62%, 74% {
+              transform: rotate3d(0,0,1,0deg);
+          }
+          29%, 41%, 53%, 65%, 77% {
+              transform: rotate3d(0,0,1,-15deg);
+          }
+          80% {
+              transform:rotate3d(0, 0, 1, 0deg);
+          }
+      }
+      
+      @media (min-width:320px) and (max-width:767px){
+           section.banners {display: block;margin-top: 0px;padding: 0px;}
+          
+      }    
+      
+      
+      </style>
 
 
 <nav class="navbar">
@@ -101,7 +364,7 @@
     </div>
 	
 	 <div class="callnow_mm">
-        <a href="tel: (888) 501-0180">
+        <a href="tel: (888) 441-8506">
         <div class="hdrtxt"><i class="fa fa-headphones "></i> Call </div>
         </a>
      </div>
@@ -115,12 +378,64 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <div class="tollfree">
-          <a href="tel: (888) 501-0180"><span>Call 24/7 for our best deals</span><img src="images/phone01.png">  (888) 501-0180 </a>
+          <a href="tel: (888) 441-8506"><span>Call 24/7 for our best deals</span><img src="images/phone01.png">  (888) 441-8506 </a>
         </div>
       </ul>
     </div>
   </div>
 </nav>  
+
+<section class="banners">
+    <div class="bannerInner">
+        <div class="clickFull">
+             <a href="tel:(888) 441-8506" class="ddka"></a>
+    <div class="airLineimg">
+        <h1 class="blink1">Expedia Reservations Desk</h1>
+        <img src="images/Generic-Banner1.png">
+    </div>
+    <!--<a href="tel:(888) 441-8506">
+    <ul class="list-view-items1">
+                  <li> New Bookings</li>
+                  <li> Changes </li>
+                  <li> Cancellations</li>
+                  <li> Customer Service </li>
+                  <li> Refunds </li>
+                  <li> Upgrades </li>
+    </ul></a>-->
+    <h1><span><a href="tel:(888) 441-8506">New Bookings | Changes | Cancellations <!--| Refunds | Upgrades--></a></span></h1>
+  <!--  <div class="airlineLlogos">
+        <img src="images/airline-gnric-pullu.png">
+    </div>
+    <div class="dss-call2"><a href="tel:(888) 441-8506">Booking &amp; Changes Over The Phone</a></div>
+
+        <ul>
+            <li>Flexible payment</li>
+            <li>Price match guarantee</li>
+        </ul>
+        <a href="tel:(888) 441-8506" id="girlIconCallEvent">
+       <div class="girlCalling">
+           
+               <img src="images/calling-cus.png">
+          
+        </div> </a>-->
+        <h2><p><b>No Hold - Call Answered in 5 Sec</b></p>
+            <b><a href="tel:(888) 441-8506" id="ClickToCallEvent" class="blink">Click to Call !</a></b>
+        </h2>
+        <div class="numbers">
+            <a href="tel:(888) 441-8506">
+                <span class="ringing_phone"></span>
+                <span class="nbrs"><small>Unpublished Phone-Only Offers</small> (888) 441-8506</span>
+            </a>
+            
+        </div>
+        <p class="mt-3 tt_btm">Call Our Airline Booking Experts and Save Up to 60% on Domestic and Up to 50% on International Flight Booking</p>
+        </div>
+        <hr>
+      
+    </div>
+</section>
+
+
 <div class="slider_homes" style="background: url(images/bg.jpg) left top no-repeat;
    height: auto;
    padding: 30px 0px 80px;
@@ -131,7 +446,7 @@
          <div class="col-md-12">
             <div class="hgdft_head">
                <h1> Book Now. Enjoy Your Trip Later. </h1>
-               <h2> <i class="fa fa-phone"></i> For Phone-only Flight Deals, Call <a href="tel: (888) 501-0180">  (888) 501-0180 </a> </h2>
+               <h2> <i class="fa fa-phone"></i> For Phone-only Flight Deals, Call <a href="tel: (888) 441-8506">  (888) 441-8506 </a> </h2>
             </div>
             <link rel="stylesheet" type="text/css" href="Searchform/css/style.css">
 <script src="Searchform/js/jquery.min.js"></script>
@@ -778,7 +1093,107 @@
 </div>
 
 
-<div class="footer_top">
+<section class="destinations-carousel">
+    <h2>Explore stays in popular destinations</h2>
+    <div class="carousel-wrapper">
+      <button class="carousel-btn left" onclick="slideLeft()">
+        <span class="arrow">&#10094;</span>
+      </button>
+  
+      <div class="carousel-track" id="carouselTrack">
+        <div class="dest-card">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Cancun">
+          <div class="dest-info">
+            <div class="dest-city">Cancun</div>
+            <div class="dest-region">Quintana Roo, Mexico</div>
+            <div class="dest-price">Avg. nightly price: $274</div>
+          </div>
+        </div>
+  
+        <div class="dest-card">
+          <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=400&q=80" alt="Punta Cana">
+          <div class="dest-info">
+            <div class="dest-city">Punta Cana</div>
+            <div class="dest-region">Dominican Republic</div>
+            <div class="dest-price">Avg. nightly price: $399</div>
+          </div>
+        </div>
+  
+        <div class="dest-card">
+          <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=400&q=80" alt="Key West">
+          <div class="dest-info">
+            <div class="dest-city">Key West</div>
+            <div class="dest-region">Florida, USA</div>
+            <div class="dest-price">Avg. nightly price: $581</div>
+          </div>
+        </div>
+  
+        <div class="dest-card">
+          <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=400&q=80" alt="Miami Beach">
+          <div class="dest-info">
+            <div class="dest-city">Miami Beach</div>
+            <div class="dest-region">Florida, USA</div>
+            <div class="dest-price">Avg. nightly price: $331</div>
+          </div>
+        </div>
+  
+        <!-- Bali (Online Image) -->
+        <div class="dest-card">
+          <img src="/images/bali.jpg" alt="Bali">
+          <div class="dest-info">
+            <div class="dest-city">Bali</div>
+            <div class="dest-region">Indonesia</div>
+            <div class="dest-price">Avg. nightly price: $210</div>
+          </div>
+        </div>
+  
+        <!-- Santorini (Online Image) -->
+        <div class="dest-card">
+          <img src="/images/santorini.jpg" alt="Santorini">
+          <div class="dest-info">
+            <div class="dest-city">Santorini</div>
+            <div class="dest-region">Greece</div>
+            <div class="dest-price">Avg. nightly price: $412</div>
+          </div>
+        </div>
+      </div>
+  
+      <button class="carousel-btn right" onclick="slideRight()">
+        <span class="arrow">&#10095;</span>
+      </button>
+    </div>
+  </section>
+
+
+
+  <section style="position: relative; width: 100%; height: 60vh; overflow: hidden; 
+  border-radius: 0 2rem 2rem 0; margin: auto; max-width: 100%;">
+
+<!-- Background Image -->
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" 
+alt="Traveler on beach at sunset"
+style="width: 100%; height: 100%; object-fit: cover; border-radius: 0 2rem 2rem 0;">
+
+<!-- Text Overlay -->
+<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+color: white; text-align: center; padding: 1rem; background-color: rgba(0, 0, 0, 0.4); 
+border-radius: 1rem; max-width: 90%;">
+<h1 style="font-size: 2.5rem; margin-bottom: 1rem;">Go Big. Go Abroad.</h1>
+<p style="font-size: 1.2rem; max-width: 600px; margin: auto;">
+Wake up to new adventures. The possibilities are endless with an international getaway.
+</p>
+<a href="#" 
+style="display: inline-block; margin-top: 1.5rem; padding: 0.75rem 1.5rem; 
+background-color: #0071c2; color: white; text-decoration: none; border-radius: 6px;">
+Unlock Your Deals
+</a>
+</div>
+</section>
+
+
+
+
+<!-- <div class="footer_top">
    <div class="container">
       <div class="row hdgfrt_gh">
          <div class="col-md-6 lsers_mde" style="background:url(images/banner3.jpg) left top no-repeat; height: 160px;
@@ -796,7 +1211,10 @@
          </div>
       </div>
    </div>
-</div>
+</div> -->
+
+
+
 <section class="dest_bx pd50">
    <div class="container">
       <div class="row">
@@ -852,7 +1270,7 @@
                </a>
             </div>
          </div>
-         <div class="package_con">
+         <!-- <div class="package_con">
             <div class="item_dest">
                <a href="#">
                   <img src="images/lasvegas0.jpg" class="img-fluid">
@@ -862,7 +1280,7 @@
                   </div>
                </a>
             </div>
-         </div>
+         </div> -->
       </div>
    </div>
 </section>
@@ -2508,50 +2926,7 @@
 
 </style>
 
-<div class="greatAirfarespopUp" id="boxes">
-    <button class="closePopup" onclick="closePopup()">
-        <i class="fa fa-times"></i>
-    </button>
-    <div class="gamainCover">
-       <div class="gamainPoup">
-         <!-- <a href="javascript:;" onclick="myFunction1()" class="closeBtns"><img src="images/close-fat.png"></a>-->
-          <div class="whole-banner-clickable">
-             <a href="tel:1-888-928-1369" class="wholeClickable"></a>
-             <div class="gAcontent">
-                <!--<div class="newLogoFlex1">
-                   <div class="siteLogo"><img src="https://www.expeideatravel.com/images/logo.png"></div>
-                   <div class="siteNumb">1-888-928-1369</div>
-                </div>-->
-                <h2>Airlines Reservations and Bookings</h2>
-                <div class="airlinerLogo"><img id="utmpopupSmalllogo" src="images/Airline-Ticket.png" alt="Cheap"></div>
-                <a href="tel:1-888-928-1369" class="svnSpt">24/7 Reservations &amp; Support</a>
-                <div class="usplst">
-                   <div>New Booking</div>
-                   <div>Changes</div>
-                   <div>Cancellation</div>
-                   <div>Customer Service</div>
-                   <a href="tel:1-888-928-1369" class="svnSpt">&nbsp;</a>
-                </div>
-                <h2 style="display: none"><span>Cheap</span> Flight Deals</h2>
-                <div class="flightImage">
-                   <img id="utmpopuplogo" src="images/airline-gnric-pullu.png">
-                </div>
-                <div class="girlCalling1">
-                   <img src="images/calling-cus.png">
-                </div>
-                <p class="callTxt">No Hold - Call Answered in 5 Sec</p>
-                <div class="callicons post">
-                   <a href="tel:1-888-928-1369" class="circlePhone"></a>
-                   <h4>
-                      <a href="tel:1-888-928-1369">1-888-928-1369</a>
-                   </h4>
-                </div>
-                <p class="pohlp"><a href="tel:1-888-928-1369">24/7 Helpline</a></p>
-             </div>
-          </div>
-       </div>
-    </div>
- </div>
+
  
  
  
@@ -3633,11 +4008,11 @@ function myFunction1() {
 
 
 <header class="headers _headers callStringNew footerNumShow">
-        <a href="tel:(888) 501-0180" class="fulclk">
-            <span class="_call-num">(888) 501-0180</span>
+        <a href="tel:(888) 441-8506" class="fulclk">
+            <span class="_call-num">(888) 441-8506</span>
         </a>
         <div class="callIcon1 ">
-            <a href="tel:(888) 501-0180" class="_phonebox pulse">
+            <a href="tel:(888) 441-8506" class="_phonebox pulse">
                 <span class="wifi-symbol">
                     <span class="wifi-circle first"></span>
                     <span class="wifi-circle second"></span>
@@ -3647,9 +4022,9 @@ function myFunction1() {
             </a>
         </div>
         <div class="rightCall">            
-            <a href="tel:(888) 501-0180">
+            <a href="tel:(888) 441-8506">
                 <span class="_callphone">Call Us &amp; get Upto <small>40%OFF</small> on Flights</span>
-                <span class="_numcall">(888) 501-0180</span>
+                <span class="_numcall">(888) 441-8506</span>
             </a>
             <img class="callImgGirl" src="images/callImgGirl_cruise2.jpg" alt="calling girl icon">
         </div>
@@ -3684,9 +4059,10 @@ function myFunction1() {
         <div class="ftr_bx">
           <h4>Contact <span>Info</span></h4>
           <ul class="dsnp-uladm" style="margin-bottom: 10px;">
-            <li class="dsnp-liadm"><a href="javascript:void(0);"><i class="fa fa-home"></i> 3519 S Maryland Pkwy. Ste C · Las Vegas, NV 89169
+            <li class="dsnp-liadm"><a href="javascript:void(0);"><i class="fa fa-home"></i> 10140 Covington Cross Dr
+Las Vegas, NV 89144, USA
  </a></li>
-            <li><a href="tel: (888) 501-0180"><i class="fa fa-phone"></i>  (888) 501-0180 </a></li>
+            <li><a href="tel: (888) 441-8506"><i class="fa fa-phone"></i>  (888) 441-8506 </a></li>
             <!-- <li><a href="https://airlinesfarefinder.com/"><i class=" fa fa-desktop"></i> Expeideatravelcom</a></li> -->
             <li>
                 <a href="mailto:info@Expeideatravel.com" style="display: flex; align-items: center;">
@@ -3732,33 +4108,259 @@ function myFunction1() {
 <div class="footer_btm">Copyright © 2024 Expeideatravel.com is a unit of Expeidea Travel LLC. All Rights Reserved</div>
 
 
-
+<div id="boxes" class="col-sm-6 col-sm-offset-3">
+    <a href="tel:(888) 441-8506">
+       <div class="d-block d-md-block d-lg-none">
+          <div class="modal fade show custompopup" style="display: block;">
+             <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content pt-0">
+                   <div class="modal-footer border-0">
+                       <p  onclick="myFunction1()" class="btn-secondary">
+                       <i class="fa fa-close " aria-hidden="true"></i></p>
+                       
+                       </div>
+                   <div class="popup-content">
+                      <img alt="Logo" class="header-logo" loading="lazy" width="120" height="40" decoding="async" data-nimg="1" style="color:transparent" src="images/expedia.png">
+                      <p>Talk to a travel expert and Save 25%</p>
+                      <h2 class="support-no">
+                         <i class="fas fa-headset"></i> <!-- -->(888) 441-8506<!-- --> 
+                      </h2>
+                      <hr>
+                      <h5>24/7 Reservation Support</h5>
+                      <div class="row justify-content-center">
+                         <div class="col-6 align-self-center"><img alt="Logo" class="" loading="lazy" width="50" height="50" decoding="async" data-nimg="1" style="color:transparent;width:100%;height:auto" sizes="100vw" src="images/left-man.jpg"></div>
+                         <div class="col-6">
+                            <ul class="arrow-list">
+                               <li>Tickets Booking</li>
+                               <li>Manage Booking</li>
+                               <li>Customer Service</li>
+                               <li>Cancellation</li>
+                            </ul>
+                         </div>
+                         <div class="mt-3 call-offers">
+                             <img src="images/cal2.gif" style="width:50px; height:50px">
+                            <div>
+                               <p class="mb-0">Call Us &amp; get Upto <small>40%OFF</small> on Flights</p>
+                               <h4 class="mb-0">(888) 441-8506</h4>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </a>
+     </div>
 
 
 
 </html>
 <style>
-    .closePopup {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        background-color: transparent;
-        color: #0a3788; /* Match your UI color */
-        border: none;
-        font-size: 24px;
-        cursor: pointer;
-        z-index: 20;
-    }
-
-    .closePopup i {
-        font-size: 24px;
-        font-weight: bold;
-    }
-
-    .closePopup:hover {
-        color: #f00; /* Optional hover effect */
-    }
-</style>
+    .d-lg-none {
+          display: none !important;
+      }  
+      
+      #boxes{ display:none;}
+      
+       .modal.fade.show {
+          opacity: 1;
+          padding: 0 !important;
+          overflow: unset;
+          background: rgba(0, 0, 0, .85);
+          text-align: center;    z-index: 9999999999;
+      }   
+  .popup-content {
+      background-color: #fff;
+      margin: 6% auto;
+      padding: 8px;
+      border: 1px solid #00185e;
+      width: 96%;
+      max-width: 375px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+      border-radius: 8px;
+      text-align: center;
+  }
+  .custompopup .modal-footer.border-0 {
+      margin-top: 0px;
+  }
+  
+  .border-0 {
+      border: 0 !important;
+  }
+  .modal-footer {
+      display: flex;
+      flex-shrink: 0;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+      padding: calc(var(--bs-modal-padding) - var(--bs-modal-footer-gap)* .5);
+      background-color: var(--bs-modal-footer-bg);
+      border-top: var(--bs-modal-footer-border-width) solid var(--bs-modal-footer-border-color);
+      border-bottom-right-radius: var(--bs-modal-inner-border-radius);
+      border-bottom-left-radius: var(--bs-modal-inner-border-radius);
+  }
+  .pt-0 {
+      padding-top: 0 !important;
+  }
+  
+  .modal-content {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      color: var(--bs-modal-color);
+      pointer-events: auto;
+      background-color: var(--bs-modal-bg);
+      background-clip: padding-box;
+      border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
+      border-radius: var(--bs-modal-border-radius);
+      outline: 0;
+  }
+  .modal-content {
+      background: hsla(0, 0%, 100%, 0) !important;
+  }
+  .modal.show .modal-dialog {
+      transform: none;
+  }
+  .modal.fade .modal-dialog {
+      transition: transform .3s ease-out;
+      transform: translateY(-50px);
+  }
+  @media (max-width: 767px) {
+      .modal.show .modal-dialog {
+          margin: 0;
+      }
+  }
+  .modal-dialog-centered {
+      display: flex;
+      align-items: center;
+      min-height: calc(100% - var(--bs-modal-margin)* 2);
+  }
+  .modal-dialog {
+      position: relative;
+      width: auto;
+      margin: var(--bs-modal-margin);
+      pointer-events: none;
+  }
+  
+  .header-logo {
+      width: auto;
+      margin-bottom: 20px;
+      margin-left: 40px;
+      margin-top: 10px;
+  }
+  .support-no {
+      font-size: 32px;
+      font-weight: 700;
+      color: #ff5722;
+  }
+  hr {
+      width: 100%;
+      height: 3px !important;
+      color: #da552f !important;
+     
+      margin-top: 0 !important;
+      margin: 1rem 0;
+     
+      border: 0;
+      border-top: var(--bs-border-width) solid;
+      opacity: .25;
+  }
+  .justify-content-center {
+      justify-content: center !important;
+  }
+  
+  .row {
+      --bs-gutter-x: 1.5rem;
+      --bs-gutter-y: 0;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: calc(-1* var(--bs-gutter-y));
+      margin-right: calc(-.5* var(--bs-gutter-x));
+      margin-left: calc(-.5* var(--bs-gutter-x));
+  }
+  .align-self-center {
+      align-self: center !important;
+  }
+  .arrow-list {
+      list-style-type: none;
+      padding: 0;
+      text-align: left;
+      font-weight: 500;
+  }
+  .arrow-list li, .arrow-list li:hover {
+      background: linear-gradient(90deg, #4d8cff, #fff);
+  }
+  
+  .arrow-list li {
+      position: relative;
+      color: #00185e;
+      padding: 1px 0 0 7px !important;
+      margin: 12px 0 !important;
+      cursor: pointer;
+      transition: background .3s;
+      border-radius: 12px 0;
+      
+      font-size: 16px;
+      line-height: 1.9;
+      font-weight: 400;
+  }
+  .call-offers {
+      width: 92%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background: #00308D;
+      padding: 10px 15px;
+      border-radius: 5px;
+      color: #fff;
+      text-align: left;
+      margin-top: 12px;
+  }
+  .call-offers h4 {
+      font-size: 24px;
+  }
+  p.mb-0 {
+      font-size: 13px;
+  }
+  p.mb-0 small {
+      color: #fff;
+      background-color: #0f4ab5;
+      border-radius: 5px;
+      padding: 3px;
+      font-weight: 400;
+      letter-spacing: 1px;
+  }
+  .custompopup h4 {
+      margin-top: 10px;
+      color: #fff;
+      font-size: 25px;
+      line-height: 30px;
+      font-weight: 700;
+  }
+  
+  @media (min-width:320px) and (max-width:767px){
+      .d-block {display: block !important;}
+   .btn-secondary {
+          font-size: 14px;
+          font-weight: 600;
+          border-radius: 20px;
+          background: rgba(0, 74, 173, 0) !important;
+          color: #ed942d !important;
+          border: 0;
+          padding: 10px 30px !important;
+          right: -3px !important;
+          position: relative !important;
+          top: 79px !important;
+          border: none !important;
+      }   
+      
+     #boxes{ display:block;} 
+      
+  }    
+      
+  </style>
 	
 	<script>
 	//IIFE
@@ -3851,3 +4453,19 @@ function myFunction1() {
         popup.style.display = "none";
     }
 </script>
+
+<script>
+    function slideLeft() {
+      document.getElementById('carouselTrack').scrollBy({
+        left: -300,
+        behavior: 'smooth'
+      });
+    }
+  
+    function slideRight() {
+      document.getElementById('carouselTrack').scrollBy({
+        left: 300,
+        behavior: 'smooth'
+      });
+    }
+  </script>

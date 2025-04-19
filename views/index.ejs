@@ -151,7 +151,269 @@
 </head>
 
 <body>
-
+    <style>
+        section.banners {
+          display: none;
+      } 
+      .banners {
+          background-color: #fff;
+          padding: 15px 5px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      .bannerInner {
+          background-color: rgba(255,255,255,0.5);
+          width: 100%;
+          padding: 0 0px 0 0px;
+          text-align: center;
+      }
+      .ringing_phone {
+          animation-name: trin;
+          animation-duration: 1.5s;
+          animation-iteration-count: infinite;
+          animation-timing-function: linear;
+      }
+          .ringing_phone {
+          border: solid 5px #e6effe;
+          border-radius: 50%;
+          height: 60px;
+          width: 60px;
+          background: url(../cm-reservation/images/phoneRotate.png) center center no-repeat;
+          text-align: center;
+          display: inline-block;
+          background-size: 28px;
+      }
+      .clickFull {
+          position: relative;
+      }
+      .clickFull a.ddka {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+      }
+      .airLineimg {
+          margin: 0px 0 5px 0;
+          display: inline-block;
+          width: 100%;
+      }
+      .airLineimg img {
+          width: 100%;
+          margin: 0px 0px;
+      }
+      .bannerInner h1 {
+          color: #191e3b;
+          font-size: 18px;
+          font-weight: 500;
+          margin:4px 0 4px 0;    
+          font-family: 'Fira Sans', sans-serif;
+      }
+      .airlineLlogos {
+          text-align: center;
+          margin-bottom: 10px;
+      }
+      .airlineLlogos img {
+         width: 100%;
+         margin: 0px 0px;
+      }
+      .banners .bannerInner ul {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-bottom: 2px solid #1a3e6e;
+          padding-bottom: 4px;
+          margin-bottom: 20px;
+          margin-top: 20px;
+      }
+      .banners .bannerInner ul {
+          border-bottom: 2px solid #e01933;
+          padding: 0px;
+          list-style: none;
+      }
+      .banners .bannerInner ul li {
+          color: #000;
+          font-size: 14px;
+          background-image: url(../cm-reservation/images/checkIcons.png);
+          background-repeat: no-repeat;
+          background-position: left center;
+          padding-left: 18px;
+          font-weight: 500;
+          margin: 0;
+          font-family: 'Fira Sans', sans-serif;
+      }
+      .bannerInner h2 {
+          margin: 0;
+          padding: 0;
+          font-weight: 500;
+          font-size: 18px;
+      }
+      .bannerInner .numbers {
+          background: #00308D;
+          border: 0;
+          margin-top: 5px;
+          padding: 3px;
+          background-color: #00308D;
+          position: relative;
+      }
+      .bannerInner .clickFull .numbers {
+          border-radius: 50px;
+      }
+      .bannerInner .numbers a {
+          color: #191e3b;
+          font-size: 27px;
+          font-weight: 600;
+          padding: 0 5px 0 5px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-family: 'Fira Sans', sans-serif;
+      }
+        span.nbrs {
+          text-align: left;
+          color: #faf8fd;font-size: 25px;
+      }  
+      .bannerInner .numbers a span.nbrs small {
+          font-size: 15px;
+          display: block;
+          text-align: left;
+          font-weight: 500;
+          position: relative;
+          top: 3px;color: #f4f7f6;
+          font-family: 'Fira Sans', sans-serif;
+      }
+      .bannerInner hr {
+          border-color: rgb(46 46 46 / 30%);
+          margin: 20px 0 5px 0;
+      }
+      
+      hr {
+          margin-top: 20px;
+          margin-bottom: 20px;
+          border: 0;
+          border-top: 1px solid #eee;
+      }
+      
+      .airLineimg h1 {
+          color: #fdfdfd;
+          font-size: 19px;
+          font-weight: 500;
+          margin: 0px 0px;
+          font-family: 'Fira Sans', sans-serif;
+          background: #00308D;
+          padding: 11px 0px;
+      }
+      
+      .girlCalling {
+          margin-top: 10px;
+          margin-bottom: 11px;
+          position: relative;
+      }
+      .girlCalling img {
+          border-radius: 50%;
+          border: solid 4px #0f4ab5;
+      }
+      .bannerInner h2 a {
+          color: #e01933;
+          font-size: 20px;
+          font-family: 'Fira Sans', sans-serif;
+      }
+      .bannerInner h2 p {
+          margin: 10px 0px!important;
+              font-size: 18px;
+          font-weight: 400;
+          font-family: 'Fira Sans', sans-serif;
+          color:#000;
+      }
+      .blink {animation: blinker 1.3s linear infinite;}
+      
+      .bannerInner h1 span a {
+          line-height: 29px;
+          color: #191e3b;
+          font-size: 17px;
+      }
+      .bannerInner h1 span {
+          color: #191e3b;
+          font-size: 18px;
+          font-weight: 600;
+          margin: 0 0 20px 0;
+          font-family: 'Fira Sans', sans-serif;
+          background: #f58c14;
+          padding: 8px 12px;
+          border-radius: 15px;
+      }
+      .dss-call2 {
+          margin: 15px 20px;
+          font-size: 18px;
+          font-weight: 600;
+          font-family: 'Fira Sans', sans-serif;
+      }
+      .dss-call2 a {
+          color: #000;
+      }
+      ul.list-view-items1 {
+          list-style-type: none;
+          display: flex;
+          flex-wrap: wrap;
+          padding: 0;
+          justify-content: space-between;
+          border-bottom: 0px solid #e01933!important;
+          margin-bottom: 3px!important;
+          margin-top: 2px!important;
+      }
+      ul.list-view-items1 li {
+          color: #fff!important;
+          width: 49%;
+          text-align: center;
+          font-size: 16px!important;
+          line-height: 26px;
+          font-weight: 400!important;
+          background: #0f4ab5!important;
+          margin-bottom: 18px!important;
+          padding: 5px 0px;
+          border-radius: 4px;
+          font-family: 'Fira Sans', sans-serif;
+      }
+      p.mt-3.tt_btm {
+          color: #000;
+          font-size: 16px;
+          font-family: 'Fira Sans', sans-serif;
+          font-weight: 600;
+          line-height: 28px;
+          text-align: center;
+      }
+      
+      @keyframes blinker {50% {opacity: 0;}}
+      
+      @keyframes trin {
+          from {
+              transform:rotate3d(0, 0, 1, 0deg);
+          }
+          20%, 32%, 44%, 56%, 68% {
+              transform: rotate3d(0, 0, 1, 0deg);
+          }
+          23%, 35%, 47%, 59%, 71% {
+              transform: rotate3d(0,0,1,15deg);
+          }
+          26%, 38%, 50%, 62%, 74% {
+              transform: rotate3d(0,0,1,0deg);
+          }
+          29%, 41%, 53%, 65%, 77% {
+              transform: rotate3d(0,0,1,-15deg);
+          }
+          80% {
+              transform:rotate3d(0, 0, 1, 0deg);
+          }
+      }
+      
+      @media (min-width:320px) and (max-width:767px){
+           section.banners {display: block;margin-top: 0px;padding: 0px;}
+          
+      }    
+      
+      
+      </style>
 
 
     <nav class="navbar">
@@ -166,7 +428,7 @@
             </div>
 
             <div class="callnow_mm">
-                <a href="tel: (888) 501-0180">
+                <a href="tel: (888) 441-8506">
                     <div class="hdrtxt"><i class="fa fa-headphones "></i> Call </div>
                 </a>
             </div>
@@ -180,12 +442,64 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <div class="tollfree">
-                        <a href="tel: (888) 501-0180"><span>Call 24/7 for our best deals</span><img src="images/phone01.png">  (888) 501-0180 </a>
+                        <a href="tel: (888) 441-8506"><span>Call 24/7 for our best deals</span><img src="images/phone01.png">  (888) 441-8506 </a>
                     </div>
                 </ul>
             </div>
         </div>
     </nav>
+
+    <section class="banners">
+        <div class="bannerInner">
+            <div class="clickFull">
+                 <a href="tel:(888) 441-8506" class="ddka"></a>
+        <div class="airLineimg">
+            <h1 class="blink1">Expedia Reservations Desk</h1>
+            <img src="images/Generic-Banner1.png">
+        </div>
+        <!--<a href="tel:(888) 441-8506">
+        <ul class="list-view-items1">
+                      <li> New Bookings</li>
+                      <li> Changes </li>
+                      <li> Cancellations</li>
+                      <li> Customer Service </li>
+                      <li> Refunds </li>
+                      <li> Upgrades </li>
+        </ul></a>-->
+        <h1><span><a href="tel:(888) 441-8506">New Bookings | Changes | Cancellations <!--| Refunds | Upgrades--></a></span></h1>
+      <!--  <div class="airlineLlogos">
+            <img src="images/airline-gnric-pullu.png">
+        </div>
+        <div class="dss-call2"><a href="tel:(888) 441-8506">Booking &amp; Changes Over The Phone</a></div>
+
+            <ul>
+                <li>Flexible payment</li>
+                <li>Price match guarantee</li>
+            </ul>
+            <a href="tel:(888) 441-8506" id="girlIconCallEvent">
+           <div class="girlCalling">
+               
+                   <img src="images/calling-cus.png">
+              
+            </div> </a>-->
+            <h2><p><b>No Hold - Call Answered in 5 Sec</b></p>
+                <b><a href="tel:(888) 441-8506" id="ClickToCallEvent" class="blink">Click to Call !</a></b>
+            </h2>
+            <div class="numbers">
+                <a href="tel:(888) 441-8506">
+                    <span class="ringing_phone"></span>
+                    <span class="nbrs"><small>Unpublished Phone-Only Offers</small> (888) 441-8506</span>
+                </a>
+                
+            </div>
+            <p class="mt-3 tt_btm">Call Our Airline Booking Experts and Save Up to 60% on Domestic and Up to 50% on International Flight Booking</p>
+            </div>
+            <hr>
+          
+        </div>
+    </section>
+
+
     <div class="slider_homes" style="background: url(images/bg.jpg) left top no-repeat;
    height: auto;
    padding: 30px 0px 80px;
@@ -197,7 +511,7 @@
                     <div class="hgdft_head">
                         <h1> Book Now. Enjoy Your Trip Later. </h1>
                           
-                                                  <h2> <i class="fa fa-phone"></i> For Phone-only Flight Deals, Call <a href="tel: (888) 501-0180">  (888) 501-0180 </a> </h2>
+                                                  <h2> <i class="fa fa-phone"></i> For Phone-only Flight Deals, Call <a href="tel: (888) 441-8506">  (888) 441-8506 </a> </h2>
                     </div>
                     <link rel="stylesheet" type="text/css" href="Searchform/css/style.css">
                     <script src="Searchform/js/jquery.min.js"></script>
@@ -868,26 +1182,11 @@
     </div>
 
 
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     
     <section class="destinations-carousel">
-        <h2>Explore stays in popular destinations
-        </h2>
+        <h2>Explore stays in popular destinations</h2>
         <div class="carousel-wrapper">
           <button class="carousel-btn left" onclick="slideLeft()">
             <span class="arrow">&#10094;</span>
@@ -902,6 +1201,7 @@
                 <div class="dest-price">Avg. nightly price: $274</div>
               </div>
             </div>
+      
             <div class="dest-card">
               <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=400&q=80" alt="Punta Cana">
               <div class="dest-info">
@@ -910,6 +1210,7 @@
                 <div class="dest-price">Avg. nightly price: $399</div>
               </div>
             </div>
+      
             <div class="dest-card">
               <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=400&q=80" alt="Key West">
               <div class="dest-info">
@@ -918,6 +1219,7 @@
                 <div class="dest-price">Avg. nightly price: $581</div>
               </div>
             </div>
+      
             <div class="dest-card">
               <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=400&q=80" alt="Miami Beach">
               <div class="dest-info">
@@ -926,16 +1228,20 @@
                 <div class="dest-price">Avg. nightly price: $331</div>
               </div>
             </div>
+      
+            <!-- Bali (Online Image) -->
             <div class="dest-card">
-              <img src="https://images.unsplash.com/photo-1553484771-208e96b0f64b?auto=format&fit=crop&w=400&q=80" alt="Bali">
+              <img src="/images/bali.jpg" alt="Bali">
               <div class="dest-info">
                 <div class="dest-city">Bali</div>
                 <div class="dest-region">Indonesia</div>
                 <div class="dest-price">Avg. nightly price: $210</div>
               </div>
             </div>
+      
+            <!-- Santorini (Online Image) -->
             <div class="dest-card">
-              <img src="https://images.unsplash.com/photo-1535121010511-186ad6b37c74?auto=format&fit=crop&w=400&q=80" alt="Santorini">
+              <img src="/images/santorini.jpg" alt="Santorini">
               <div class="dest-info">
                 <div class="dest-city">Santorini</div>
                 <div class="dest-region">Greece</div>
@@ -951,7 +1257,7 @@
       </section>
       
       
-      <section style="position: relative; width: 100%; height: 60vh; overflow: hidden; 
+     <section style="position: relative; width: 100%; height: 60vh; overflow: hidden; 
                  border-radius: 0 2rem 2rem 0; margin: auto; max-width: 100%;">
 
   <!-- Background Image -->
@@ -1354,25 +1660,26 @@
                         <div class="about_sec">
                            
 
-                            <h4><strong>Expeidea Travel: Your Trusted Partner for Affordable Flight Bookings</strong></h4>
+                            <h4><strong>Fly Smarter with Expeidea Travel — Affordable Flights Made Easy</strong></h4>
 
-                            <p><strong>Expeidea Travel</strong> is your all-in-one travel agency, making it easy to book cheap flight tickets for domestic and international travel. Whether you're flying within the U.S. or planning a trip to Europe, Canada, or Asia, we specialize in finding the best airfare deals to match your needs and budget. Let us be your reliable flight search partner — making travel stress-free and affordable every step of the way.</p>
+                            <p><strong>Expeidea Travel</strong> is your one-stop destination for booking affordable domestic and international flights. Whether you're jetting across the U.S. or planning an overseas adventure to Europe, Asia, or Canada, we’re here to find you the best deals without the hassle. Our goal? To make every step of your journey smooth, cost-effective, and stress-free.</p>
                             
-                            <p><strong>Why Choose Expeidea Travel?</strong></p>
+                            <h5><strong>Why Book with Expeidea Travel?</strong></h5>
                             
-                            <p><strong>1. Expert Travel Advisors</strong><br>
-                            Our knowledgeable travel team works tirelessly to find you the most cost-effective and convenient flight options, tailored specifically to your travel preferences.</p>
+                            <p><strong>1. Personalized Travel Solutions</strong><br>
+                            Our experienced travel advisors compare fares from leading airlines to deliver options that fit your schedule, preferences, and budget — saving you time and money.</p>
                             
-                            <p><strong>2. 24/7 Live Customer Support</strong><br>
-                            Need to book, cancel, or change your flight? No problem. Our support team is available around the clock to assist with any travel-related questions or last-minute adjustments.</p>
+                            <p><strong>2. Around-the-Clock Support</strong><br>
+                            Need to modify, cancel, or book a flight in a hurry? Our 24/7 customer support team is here to help whenever you need us, day or night.</p>
                             
-                            <p><strong>3. Low Fares All Year Long</strong><br>
-                            We offer competitive rates on flights throughout the year. Be sure to explore our special offers and exclusive discounts before finalizing your booking.</p>
+                            <p><strong>3. Affordable Fares Year-Round</strong><br>
+                            Enjoy competitive pricing on flights all year long. From seasonal discounts to limited-time promotions, we make sure you always get a great deal.</p>
                             
-                            <p><strong>4. Great for Last-Minute Trips</strong><br>
-                            Whether it’s an unexpected business trip or a spontaneous getaway, Expeidea Travel has affordable options ready for last-minute travelers — without the high price tag.</p>
+                            <p><strong>4. Last-Minute Friendly</strong><br>
+                            Planning a spontaneous getaway or handling an urgent business trip? No worries — we specialize in last-minute travel deals that don’t break the bank.</p>
                             
-                            <p>Have questions or need help booking your flight? Our friendly team is just a call away at <strong>(888) 501-0180</strong>. Expeidea Travel is here to guide you through every step of your journey.</p>
+                            <p>Need assistance or ready to book? Call our team anytime at <strong>(888) 441-8506</strong>. At <strong>Expeidea Travel</strong>, we’re more than a booking site — we’re your trusted travel partner.</p>
+                            
                             
 
                         </div>
@@ -2176,7 +2483,7 @@
 
 
     <div id="boxes" class="col-sm-6 col-sm-offset-3">
-        <a href="tel:+1-888-402-4996">
+        <a href="tel:(888) 441-8506">
            <div class="d-block d-md-block d-lg-none">
               <div class="modal fade show custompopup" style="display: block;">
                  <div class="modal-dialog modal-dialog-centered">
@@ -2190,7 +2497,7 @@
                           <img alt="Logo" class="header-logo" loading="lazy" width="120" height="40" decoding="async" data-nimg="1" style="color:transparent" src="images/expedia.png">
                           <p>Talk to a travel expert and Save 25%</p>
                           <h2 class="support-no">
-                             <i class="fas fa-headset"></i> <!-- -->+1-888-402-4996<!-- --> 
+                             <i class="fas fa-headset"></i> <!-- -->(888) 441-8506<!-- --> 
                           </h2>
                           <hr>
                           <h5>24/7 Reservation Support</h5>
@@ -2208,7 +2515,7 @@
                                  <img src="images/cal2.gif" style="width:50px; height:50px">
                                 <div>
                                    <p class="mb-0">Call Us &amp; get Upto <small>40%OFF</small> on Flights</p>
-                                   <h4 class="mb-0">+1-888-402-4996</h4>
+                                   <h4 class="mb-0">(888) 441-8506</h4>
                                 </div>
                              </div>
                           </div>
@@ -2731,11 +3038,11 @@
 
 
     <header class="headers _headers callStringNew footerNumShow">
-        <a href="tel:(888) 501-0180" class="fulclk">
-            <span class="_call-num">(888) 501-0180</span>
+        <a href="tel:(888) 441-8506" class="fulclk">
+            <span class="_call-num">(888) 441-8506</span>
         </a>
         <div class="callIcon1 ">
-            <a href="tel:(888) 501-0180" class="_phonebox pulse">
+            <a href="tel:(888) 441-8506" class="_phonebox pulse">
                 <span class="wifi-symbol">
                     <span class="wifi-circle first"></span>
                     <span class="wifi-circle second"></span>
@@ -2745,9 +3052,9 @@
             </a>
         </div>
         <div class="rightCall">
-            <a href="tel:(888) 501-0180">
+            <a href="tel:(888) 441-8506">
                 <span class="_callphone">Call Us &amp; get Upto <small>40%OFF</small> on Flights</span>
-                <span class="_numcall">(888) 501-0180</span>
+                <span class="_numcall">(888) 441-8506</span>
             </a>
             <img class="callImgGirl" src="images/callImgGirl_cruise2.jpg" alt="calling girl icon">
         </div>
@@ -2782,9 +3089,10 @@
                     <div class="ftr_bx">
                         <h4>Contact <span>Info</span></h4>
                         <ul class="dsnp-uladm" style="margin-bottom: 10px;">
-                            <li class="dsnp-liadm"><a href="javascript:void(0);"><i class="fa fa-home"></i> 3519 S Maryland Pkwy. Ste C · Las Vegas, NV 89169
+                            <li class="dsnp-liadm"><a href="javascript:void(0);"><i class="fa fa-home"></i> 10140 Covington Cross Dr
+Las Vegas, NV 89144, USA
    </a></li>
-                            <li><a href="tel: (888) 501-0180"><i class="fa fa-phone"></i>  (888) 501-0180 </a></li>
+                            <li><a href="tel: (888) 441-8506"><i class="fa fa-phone"></i>  (888) 441-8506 </a></li>
                             <!-- <li><a href="https://Expeideatravel.com/"><i class=" fa fa-desktop"></i> Expeidea Travel.com</a></li> -->
                             <li>
                                 <a href="mailto:info@Expeideatravel.com" style="display: flex; align-items: center;">
