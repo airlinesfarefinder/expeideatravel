@@ -147,8 +147,271 @@
 </head>
 
 <body>
+    <style>
+        section.banners {
+          display: none;
+      } 
+      .banners {
+          background-color: #fff;
+          padding: 15px 5px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      .bannerInner {
+          background-color: rgba(255,255,255,0.5);
+          width: 100%;
+          padding: 0 0px 0 0px;
+          text-align: center;
+      }
+      .ringing_phone {
+          animation-name: trin;
+          animation-duration: 1.5s;
+          animation-iteration-count: infinite;
+          animation-timing-function: linear;
+      }
+          .ringing_phone {
+          border: solid 5px #e6effe;
+          border-radius: 50%;
+          height: 60px;
+          width: 60px;
+          background: url(../cm-reservation/images/phoneRotate.png) center center no-repeat;
+          text-align: center;
+          display: inline-block;
+          background-size: 28px;
+      }
+      .clickFull {
+          position: relative;
+      }
+      .clickFull a.ddka {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+      }
+      .airLineimg {
+          margin: 0px 0 5px 0;
+          display: inline-block;
+          width: 100%;
+      }
+      .airLineimg img {
+          width: 100%;
+          margin: 0px 0px;
+      }
+      .bannerInner h1 {
+          color: #191e3b;
+          font-size: 18px;
+          font-weight: 500;
+          margin:4px 0 4px 0;    
+          font-family: 'Fira Sans', sans-serif;
+      }
+      .airlineLlogos {
+          text-align: center;
+          margin-bottom: 10px;
+      }
+      .airlineLlogos img {
+         width: 100%;
+         margin: 0px 0px;
+      }
+      .banners .bannerInner ul {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-bottom: 2px solid #1a3e6e;
+          padding-bottom: 4px;
+          margin-bottom: 20px;
+          margin-top: 20px;
+      }
+      .banners .bannerInner ul {
+          border-bottom: 2px solid #e01933;
+          padding: 0px;
+          list-style: none;
+      }
+      .banners .bannerInner ul li {
+          color: #000;
+          font-size: 14px;
+          background-image: url(../cm-reservation/images/checkIcons.png);
+          background-repeat: no-repeat;
+          background-position: left center;
+          padding-left: 18px;
+          font-weight: 500;
+          margin: 0;
+          font-family: 'Fira Sans', sans-serif;
+      }
+      .bannerInner h2 {
+          margin: 0;
+          padding: 0;
+          font-weight: 500;
+          font-size: 18px;
+      }
+      .bannerInner .numbers {
+          background: #00308D;
+          border: 0;
+          margin-top: 5px;
+          padding: 3px;
+          background-color: #00308D;
+          position: relative;
+      }
+      .bannerInner .clickFull .numbers {
+          border-radius: 50px;
+      }
+      .bannerInner .numbers a {
+          color: #191e3b;
+          font-size: 27px;
+          font-weight: 600;
+          padding: 0 5px 0 5px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-family: 'Fira Sans', sans-serif;
+      }
+        span.nbrs {
+          text-align: left;
+          color: #faf8fd;font-size: 25px;
+      }  
+      .bannerInner .numbers a span.nbrs small {
+          font-size: 15px;
+          display: block;
+          text-align: left;
+          font-weight: 500;
+          position: relative;
+          top: 3px;color: #f4f7f6;
+          font-family: 'Fira Sans', sans-serif;
+      }
+      .bannerInner hr {
+          border-color: rgb(46 46 46 / 30%);
+          margin: 20px 0 5px 0;
+      }
+      
+      hr {
+          margin-top: 20px;
+          margin-bottom: 20px;
+          border: 0;
+          border-top: 1px solid #eee;
+      }
+      
+      .airLineimg h1 {
+          color: #fdfdfd;
+          font-size: 19px;
+          font-weight: 500;
+          margin: 0px 0px;
+          font-family: 'Fira Sans', sans-serif;
+          background: #00308D;
+          padding: 11px 0px;
+      }
+      
+      .girlCalling {
+          margin-top: 10px;
+          margin-bottom: 11px;
+          position: relative;
+      }
+      .girlCalling img {
+          border-radius: 50%;
+          border: solid 4px #0f4ab5;
+      }
+      .bannerInner h2 a {
+          color: #e01933;
+          font-size: 20px;
+          font-family: 'Fira Sans', sans-serif;
+      }
+      .bannerInner h2 p {
+          margin: 10px 0px!important;
+              font-size: 18px;
+          font-weight: 400;
+          font-family: 'Fira Sans', sans-serif;
+          color:#000;
+      }
+      .blink {animation: blinker 1.3s linear infinite;}
+      
+      .bannerInner h1 span a {
+          line-height: 29px;
+          color: #191e3b;
+          font-size: 17px;
+      }
+      .bannerInner h1 span {
+          color: #191e3b;
+          font-size: 18px;
+          font-weight: 600;
+          margin: 0 0 20px 0;
+          font-family: 'Fira Sans', sans-serif;
+          background: #f58c14;
+          padding: 8px 12px;
+          border-radius: 15px;
+      }
+      .dss-call2 {
+          margin: 15px 20px;
+          font-size: 18px;
+          font-weight: 600;
+          font-family: 'Fira Sans', sans-serif;
+      }
+      .dss-call2 a {
+          color: #000;
+      }
+      ul.list-view-items1 {
+          list-style-type: none;
+          display: flex;
+          flex-wrap: wrap;
+          padding: 0;
+          justify-content: space-between;
+          border-bottom: 0px solid #e01933!important;
+          margin-bottom: 3px!important;
+          margin-top: 2px!important;
+      }
+      ul.list-view-items1 li {
+          color: #fff!important;
+          width: 49%;
+          text-align: center;
+          font-size: 16px!important;
+          line-height: 26px;
+          font-weight: 400!important;
+          background: #0f4ab5!important;
+          margin-bottom: 18px!important;
+          padding: 5px 0px;
+          border-radius: 4px;
+          font-family: 'Fira Sans', sans-serif;
+      }
+      p.mt-3.tt_btm {
+          color: #000;
+          font-size: 16px;
+          font-family: 'Fira Sans', sans-serif;
+          font-weight: 600;
+          line-height: 28px;
+          text-align: center;
+      }
+      
+      @keyframes blinker {50% {opacity: 0;}}
+      
+      @keyframes trin {
+          from {
+              transform:rotate3d(0, 0, 1, 0deg);
+          }
+          20%, 32%, 44%, 56%, 68% {
+              transform: rotate3d(0, 0, 1, 0deg);
+          }
+          23%, 35%, 47%, 59%, 71% {
+              transform: rotate3d(0,0,1,15deg);
+          }
+          26%, 38%, 50%, 62%, 74% {
+              transform: rotate3d(0,0,1,0deg);
+          }
+          29%, 41%, 53%, 65%, 77% {
+              transform: rotate3d(0,0,1,-15deg);
+          }
+          80% {
+              transform:rotate3d(0, 0, 1, 0deg);
+          }
+      }
+      
+      @media (min-width:320px) and (max-width:767px){
+           section.banners {display: block;margin-top: 0px;padding: 0px;}
+          
+      }    
+      
+      
+      </style>
 
-
+  
 
     <nav class="navbar">
         <div class="container">
@@ -182,6 +445,64 @@
             </div>
         </div>
     </nav>
+
+
+    <section class="banners">
+        <div class="bannerInner">
+            <div class="clickFull">
+                 <a href="tel:+1-888-402-4996" class="ddka"></a>
+        <div class="airLineimg">
+            <h1 class="blink1">Expedia Reservations Desk</h1>
+            <img src="images/Generic-Banner1.png">
+        </div>
+        <!--<a href="tel:+1-888-402-4996">
+        <ul class="list-view-items1">
+                      <li> New Bookings</li>
+                      <li> Changes </li>
+                      <li> Cancellations</li>
+                      <li> Customer Service </li>
+                      <li> Refunds </li>
+                      <li> Upgrades </li>
+        </ul></a>-->
+        <h1><span><a href="tel:+1-888-402-4996">New Bookings | Changes | Cancellations <!--| Refunds | Upgrades--></a></span></h1>
+      <!--  <div class="airlineLlogos">
+            <img src="images/airline-gnric-pullu.png">
+        </div>
+        <div class="dss-call2"><a href="tel:+1-888-402-4996">Booking &amp; Changes Over The Phone</a></div>
+
+            <ul>
+                <li>Flexible payment</li>
+                <li>Price match guarantee</li>
+            </ul>
+            <a href="tel:+1-888-402-4996" id="girlIconCallEvent">
+           <div class="girlCalling">
+               
+                   <img src="images/calling-cus.png">
+              
+            </div> </a>-->
+            <h2><p><b>No Hold - Call Answered in 5 Sec</b></p>
+                <b><a href="tel:+1-888-402-4996" id="ClickToCallEvent" class="blink">Click to Call !</a></b>
+            </h2>
+            <div class="numbers">
+                <a href="tel:+1-888-402-4996">
+                    <span class="ringing_phone"></span>
+                    <span class="nbrs"><small>Unpublished Phone-Only Offers</small> +1-888-402-4996</span>
+                </a>
+                
+            </div>
+            <p class="mt-3 tt_btm">Call Our Airline Booking Experts and Save Up to 60% on Domestic and Up to 50% on International Flight Booking</p>
+            </div>
+            <hr>
+          
+        </div>
+    </section>
+
+
+
+
+
+
+
     <div class="slider_homes" style="background: url(images/bg.jpg) left top no-repeat;
    height: auto;
    padding: 30px 0px 80px;
@@ -870,7 +1191,7 @@
       
             <div class="col-md-4">
               <div class="whys_one" style="text-align: center; padding: 20px;">
-                <i class="fa fa-headphones" style="font-size: 36px; color: #ff6600;"></i>
+                <i class="fa fa-headphones" style="font-size: 36px; color: #00308D;"></i>
                 <div class="nm_tt" style="font-size: 20px; font-weight: 600; margin-top: 10px;">24/7 Live Support</div>
                 <p style="color: #555;">Our team is available around the clock to assist you with any travel-related needs.</p>
               </div>
@@ -878,7 +1199,7 @@
       
             <div class="col-md-4">
               <div class="whys_one" style="text-align: center; padding: 20px;">
-                <i class="fa fa-shield" style="font-size: 36px; color: #ff6600;"></i>
+                <i class="fa fa-shield" style="font-size: 36px; color: #00308D;"></i>
                 <div class="nm_tt" style="font-size: 20px; font-weight: 600; margin-top: 10px;">100% Safe Booking</div>
                 <p style="color: #555;">Your personal and payment information is fully secured with Expeidea Travel.</p>
               </div>
@@ -886,7 +1207,7 @@
       
             <div class="col-md-4">
               <div class="whys_one" style="text-align: center; padding: 20px; border-right: none;">
-                <i class="fa fa-thumbs-up" style="font-size: 36px; color: #ff6600;"></i>
+                <i class="fa fa-thumbs-up" style="font-size: 36px; color: #00308D;"></i>
                 <div class="nm_tt" style="font-size: 20px; font-weight: 600; margin-top: 10px;">Best Price Guarantee</div>
                 <p style="color: #555;">We provide budget-friendly airfare deals across 450+ airlines worldwide.</p>
               </div>
@@ -944,37 +1265,37 @@
        <section style="padding: 1px 0; background-color: #eef3f8;">
         <div style="max-width: 1150px; margin: 0 auto; padding: 0 20px;">
           <h2 style="font-size: 36px; color: #00264d; margin-bottom: 25px;">
-            Discover Great Deals on Flights to the UK with <span style="color: #ff6600;">Expeidea Travel</span>
+            Fly to the UK for Less with <span style="color: #ff6600;">Expeidea Travel</span>
           </h2>
       
           <p style="font-size: 18px; color: #222; margin-bottom: 20px;">
-            Ready to explore the rich heritage, royal landmarks, and vibrant cities of the United Kingdom? From London’s buzzing streets to the scenic landscapes of Scotland, <strong>Expeidea Travel</strong> makes your UK travel dreams come true with budget-friendly fares and trusted booking support.
+            Discover the charm of the United Kingdom — from London’s iconic skyline to the serene landscapes of the Scottish Highlands. At <strong>Expeidea Travel</strong>, we bring you unbeatable flight deals that make exploring the UK easier and more affordable than ever.
           </p>
       
           <p style="font-size: 18px; color: #222; margin-bottom: 20px;">
-            With access to more than 450 global airlines, <strong>Expeidea Travel</strong> ensures that you get the best prices on flights to popular UK destinations — whether you’re traveling for business, education, or a relaxing vacation.
+            Whether you're planning a vacation, studying abroad, or traveling for business, <strong>Expeidea Travel</strong> connects you to over 450 airlines to help you find the perfect flight — always at the best price.
           </p>
       
-          <h3 style="font-size: 24px; color: #00264d; margin-top: 30px;">Why Fly to the UK with Expeidea Travel?</h3>
+          <h3 style="font-size: 24px; color: #00264d; margin-top: 30px;">Why Choose Expeidea Travel for UK Flights?</h3>
           <ul style="font-size: 18px; color: #333; list-style-type: disc; padding-left: 20px; margin-bottom: 25px;">
-            <li>Unbeatable airfare deals from 450+ airlines worldwide</li>
-            <li>Flights to all major UK hubs: London, Manchester, Birmingham, and more</li>
-            <li>Expert assistance and 24/7 support for your travel needs</li>
-            <li>Options to add luggage, meals, or select your seat during booking</li>
-            <li>No hidden charges — what you see is what you pay</li>
+            <li>Low fares with access to 450+ international airlines</li>
+            <li>Flights to top UK cities: London, Manchester, Birmingham, Edinburgh, and more</li>
+            <li>24/7 expert support to guide your booking journey</li>
+            <li>Custom add-ons: baggage, meals, seat selection — your way</li>
+            <li>Transparent pricing — no surprises at checkout</li>
           </ul>
       
-          <h3 style="font-size: 24px; color: #00264d; margin-top: 30px;">Popular US to UK Routes</h3>
+          <h3 style="font-size: 24px; color: #00264d; margin-top: 30px;">Top Routes from the US to the UK</h3>
           <ul style="font-size: 18px; color: #333; list-style-type: disc; padding-left: 20px;">
-            <li>New York (JFK) to London Heathrow (LHR)</li>
-            <li>Los Angeles (LAX) to Manchester (MAN)</li>
-            <li>Chicago (ORD) to London Gatwick (LGW)</li>
-            <li>San Francisco (SFO) to Edinburgh (EDI)</li>
-            <li>Miami (MIA) to Birmingham (BHX)</li>
+            <li>New York (JFK) → London Heathrow (LHR)</li>
+            <li>Los Angeles (LAX) → Manchester (MAN)</li>
+            <li>Chicago (ORD) → London Gatwick (LGW)</li>
+            <li>San Francisco (SFO) → Edinburgh (EDI)</li>
+            <li>Miami (MIA) → Birmingham (BHX)</li>
           </ul>
       
           <p style="font-size: 18px; color: #222; margin-top: 30px;">
-            Book now with <strong>Expeidea Travel</strong> and experience smooth, affordable travel to the UK. Let us take the stress out of planning — so you can focus on the journey ahead!
+            Start your UK adventure today with <strong>Expeidea Travel</strong>. Simple booking, great savings, and reliable service — all in one place.
           </p>
         </div>
       </section>
@@ -1387,790 +1708,8 @@ We understand that emergencies and spontaneous trips happen. That's why our flex
 
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;display=swap" rel="stylesheet">
 
-    <style>
-        .greatAirfarespopUp .airlinerLogo {
-            padding: 0px 34px !important;
-            padding-bottom: 0px !important;
-        }
 
-        .gamainPoup a.closeBtns {
-            top: 5px !important;
-        }
 
-        a.svnSpt {
-            padding-top: 0 !important;
-        }
-
-        .usplst {
-            margin-top: 8px !important;
-            margin-bottom: 0 !important;
-        }
-
-        .greatAirfarespopUp .flightImage {
-            margin: 3px 0 !important;
-        }
-
-        .greatAirfarespopUp .girlCalling1 {
-            margin-bottom: 0 !important;
-        }
-
-        .callTxt {
-            margin-bottom: 3px !important;
-        }
-
-        .pohlp {
-            margin-bottom: 0;
-        }
-
-        .gamainCover .gamainPoup h2 {
-            font-size: 27px;
-            color: #0a3788;
-            font-weight: 700;
-            text-transform: none;
-            margin-top: 10px;
-            background-color: #fff;
-            padding: 12px 0px;
-            margin-bottom: 17px;
-            font-family: 'Fira Sans', sans-serif;
-        }
-
-        ._rate {
-            display: flex;
-            justify-content: space-between;
-            margin: 0 auto;
-            padding: 5px 10px 0px 10px;
-        }
-
-        ._rate div:first-child {
-            border-right: 1px solid lightgray;
-        }
-
-        ._rate div:first-child img {
-            padding-right: 15px;
-        }
-
-        ._rate div:last-child img {
-            padding-left: 14px;
-        }
-
-        @keyframes pulse {
-            0% {
-                transform: scale(0.5);
-                opacity: 0;
-            }
-            50% {
-                transform: scale(1);
-                opacity: 1;
-            }
-            100% {
-                transform: scale(1.3);
-                opacity: 0;
-            }
-        }
-
-        .gamainPoup a.closeBtns {
-            position: absolute;
-            right: 8px;
-            top: 12px;
-        }
-
-        .fullcclickv {
-            position: absolute;
-            z-index: 1;
-            width: 100%;
-            height: 100%;
-            left: 0;
-            top: 0;
-        }
-
-        .gamainPoup a.closeBtns img {}
-
-        .gamainCover {
-            background-color: #fff;
-            border-radius: 16px;
-            height: auto;
-            padding-bottom: 6px;
-            position: relative;
-            margin-top: 15px;
-        }
-
-        .greatAirfarespopUp {
-            background: rgb(192, 219, 236);
-            background: linear-gradient(180deg, rgba(192, 219, 236, 1) 0%, rgba(240, 241, 243, 1) 53%, rgba(201, 228, 245, 1) 100%);
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 100vh;
-            width: 100%;
-            z-index: 100000;
-            padding: 0px 13px 100px 13px;
-            text-align: center;
-            overflow-y: auto;
-            display: none;
-        }
-
-        header .topRightCurrencyConvertorHomePage {
-            z-index: 0;
-        }
-
-        .gamainPoup .pulse {
-            height: 45px;
-            width: 45px;
-            background-color: #e60146;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            z-index: 0;
-            margin-right: 15px;
-            border: 2px solid rgba(255, 255, 255, 0.5);
-        }
-
-        .gamainPoup .pulse img {
-            width: 22px;
-        }
-
-        .gamainPoup .pulse::before {
-            content: "";
-            position: absolute;
-            border: 1px solid #fff;
-            width: calc(80% + 10px);
-            height: calc(80% + 10px);
-            border-radius: 50%;
-            animation: pulse 2s linear infinite;
-        }
-
-        .gamainPoup .pulse::after {
-            content: "";
-            position: absolute;
-            border: 1px solid #fff;
-            width: calc(80% + 10px);
-            height: calc(80% + 10px);
-            border-radius: 50%;
-            animation: pulse 1s linear infinite;
-            animation-delay: 0.5s;
-        }
-
-        .callicons {
-            border: solid 1px #e6effe;
-            border-radius: 40px;
-            background: rgb(229, 238, 255);
-            background: linear-gradient(90deg, rgba(229, 238, 255, 1) 0%, rgba(246, 251, 255, 1) 100%);
-            display: flex;
-            padding: 4px;
-            margin-right: 10px;
-            margin-left: 7px;
-        }
-
-        .gAcontent {
-            width: 100%;
-        }
-
-        .callicons .circlePhone {
-            border: solid 10px #fff;
-            border-radius: 50%;
-            height: 74px;
-            width: 74px;
-            background: #032f4c url(/images/phoneRotate.png) center center no-repeat;
-            text-align: center;
-            display: inline-block;
-            background-size: 26px;
-        }
-
-        .callicons h4 {
-            margin: 0;
-            padding-left: 9px;
-            padding-top: 5px;
-            color: #404040;
-            font-weight: 500;
-        }
-
-        .callicons .circlePhone {
-            animation-name: trin;
-            animation-duration: 1.5s;
-            animation-iteration-count: infinite;
-            animation-timing-function: linear;
-        }
-
-        .callicons h4 a {
-            font-weight: bold;
-            color: #032f4c;
-            font-size: 27px;
-            display: block;
-            letter-spacing: 1px;
-            transition: unset;
-        }
-
-        .callicons h4 span {
-            font-weight: 400;
-            color: #000000;
-            font-size: 21px;
-            display: block;
-            margin-bottom: 3px;
-            text-align: left;
-        }
-
-        @keyframes trin {
-            from {
-                transform: rotate3d(0, 0, 1, 0deg);
-            }
-            20%,
-            32%,
-            44%,
-            56%,
-            68% {
-                transform: rotate3d(0, 0, 1, 0deg);
-            }
-            23%,
-            35%,
-            47%,
-            59%,
-            71% {
-                transform: rotate3d(0, 0, 1, 15deg);
-            }
-            26%,
-            38%,
-            50%,
-            62%,
-            74% {
-                transform: rotate3d(0, 0, 1, 0deg);
-            }
-            29%,
-            41%,
-            53%,
-            65%,
-            77% {
-                transform: rotate3d(0, 0, 1, -15deg);
-            }
-            80% {
-                transform: rotate3d(0, 0, 1, 0deg);
-            }
-        }
-
-        .gamainPoup {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-            padding-top: 8px;
-        }
-
-        .gamainPoup h2 {
-            font-size: 19px;
-            color: #032f4c;
-            font-weight: 400;
-            text-transform: uppercase;
-            margin-top: 10px;
-        }
-
-        .airlinerLogo {
-            padding-top: 10px;
-        }
-
-        .airlinerLogo img {
-            max-width: 78%;
-            height: auto;
-        }
-
-        .gamainPoup h3 {
-            color: #000;
-            font-weight: 100;
-            margin: 0;
-            margin-top: 5px;
-            line-height: 8px;
-            font-weight: 500;
-            line-height: 24px;
-            font-size: 18px;
-            letter-spacing: -0.5px;
-        }
-
-        .gamainPoup h3 span {
-            display: block;
-            font-weight: 400;
-            font-size: 16px;
-        }
-
-        .gamainPoup h3 span .call {
-            font-weight: 400;
-            display: inline;
-        }
-
-        .gamainPoup h3 img {
-            margin-left: 0;
-            position: relative;
-            top: 20px;
-            left: -2px;
-        }
-
-        .flightImage {
-            margin-top: 7px;
-            margin-bottom: 40px;
-            background-image: url(../images/flightPopupBg.png);
-            background-repeat: no-repeat;
-            min-height: 194px;
-            position: relative;
-        }
-
-        .flightImage img {
-            max-width: 94%;
-            position: relative;
-            top: 40px;
-        }
-
-        .btmBooks {
-            background-color: #e28a00;
-            color: #fff;
-            font-size: 12px;
-            padding: 8px;
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            border-radius: 0 0 4px 4px;
-        }
-
-        p.inqryc {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background: #032f4c;
-            text-align: center;
-            color: #fff;
-            padding: 8px 5px;
-            font-size: 17px;
-            font-weight: 400;
-            z-index: 100;
-        }
-
-        .gamainPoup {
-            padding-bottom: 10px;
-            height: auto;
-        }
-
-        p.savcd {
-            font-size: 19px;
-            color: #f00;
-            padding-top: 7px;
-            font-weight: 500;
-            text-transform: capitalize;
-            line-height: 35px;
-        }
-
-        p.savcd span {
-            background: #f00;
-            color: #fff;
-            padding: 1px 5px 0 5px;
-        }
-
-        p.savcd strong {
-            font-weight: bold;
-            font-size: 20px;
-            position: relative;
-            top: 2px;
-        }
-
-        @-webkit-keyframes pulse {
-            0% {
-                -webkit-transform: scale(0);
-                opacity: 0;
-            }
-            25% {
-                -webkit-transform: scale(0.3);
-                opacity: 1;
-            }
-            50% {
-                -webkit-transform: scale(0.6);
-                opacity: .7;
-            }
-            75% {
-                -webkit-transform: scale(0.9);
-                opacity: .4;
-            }
-            100% {
-                -webkit-transform: scale(1);
-                opacity: 0;
-            }
-        }
-
-        @keyframes pulse {
-            0% {
-                transform: scale(0);
-                opacity: 0;
-            }
-            25% {
-                transform: scale(0.3);
-                opacity: 1;
-            }
-            50% {
-                transform: scale(0.6);
-                opacity: .7;
-            }
-            75% {
-                transform: scale(0.9);
-                opacity: .4;
-            }
-            100% {
-                transform: scale(1);
-                opacity: 0;
-            }
-        }
-
-        .girlCalling1 {
-            margin-top: -77px;
-            margin-bottom: 15px;
-            position: relative;
-        }
-
-        .call_UTM_Banner_NowPopup {
-            width: 100%;
-            background-color: #fff;
-            border-radius: 0;
-            padding: 4px;
-        }
-
-        .call_UTM_Banner_NowpMain>img {
-            margin-top: -57px;
-        }
-
-        .call_UTM_Banner_NowpMain {
-            width: 100%;
-            border-radius: 0;
-            padding: 6px 0;
-            text-align: center;
-            position: relative;
-        }
-
-        .call_UTM_Banner_NowpMain a {
-            font-size: 25px;
-            color: #da0201;
-            font-weight: 400;
-            text-decoration: none;
-        }
-
-        a.close_UTM_Banner_CallPopup {
-            position: absolute;
-            right: 0;
-            top: 4px;
-            width: 22px;
-            height: 22px;
-        }
-
-        a.close_UTM_Banner_CallPopup:after,
-        a.close_UTM_Banner_CallPopup:before {
-            content: '';
-            width: 1px;
-            height: 12px;
-            position: absolute;
-            left: 9px;
-            top: 4px;
-            background: #000;
-            transform: rotate(45deg);
-        }
-
-        a.close_UTM_Banner_CallPopup:after {
-            transform: rotate(-45deg);
-        }
-
-        .call_UTM_Banner_NowpMain h2 {
-            padding-top: 6px;
-            font-size: 18px;
-            text-align: center;
-            color: #000;
-            line-height: 20px;
-            margin-bottom: 6px;
-            padding-top: 10px;
-            font-weight: 500;
-        }
-
-        .call_UTM_Banner_NowpMain h2 span {
-            display: block;
-            font-size: 12px;
-            padding-top: 4px;
-        }
-
-        .close_UTM_Banner_ppForm {
-            display: inline-block;
-            position: relative;
-            width: 100%;
-            text-align: left;
-        }
-
-        .close_UTM_Banner_ppForm .cp_UTM_Banner_Form {
-            position: relative;
-            height: 43px;
-            margin-top: 6px;
-            z-index: 0;
-        }
-
-        .close_UTM_Banner_ppForm .cp_UTM_Banner_Form span {
-            position: absolute;
-            z-index: 1;
-            left: 13px;
-            top: 10px;
-            color: #000;
-            font-size: 17px;
-            font-weight: 600;
-        }
-
-        .close_UTM_Banner_ppForm .cp_UTM_Banner_Form span img {
-            margin-right: 1px;
-            width: 20px;
-            height: 15px;
-            position: relative;
-            top: 2px;
-        }
-
-        .close_UTM_Banner_ppForm .cp_UTM_Banner_Form input {
-            position: relative;
-            left: 0;
-            width: 100%;
-            border-radius: 30px;
-            margin: 0;
-            height: 42px;
-            padding-left: 60px;
-            font-weight: bold;
-            font-size: 17px;
-            border: 1px solid #ccc !important;
-            background-color: #f5f5f5 !important;
-        }
-
-        .close_UTM_Banner_ppForm .cp_UTM_Banner_Form input::-webkit-input-placeholder {
-            font-size: 13px;
-            font-weight: bold;
-            color: #333;
-            padding-bottom: 2px;
-        }
-
-        .close_UTM_Banner_ppForm .cp_UTM_Banner_Form input::placeholder {
-            font-size: 13px;
-            font-weight: bold;
-            color: #333;
-            padding-bottom: 2px;
-        }
-
-        .close_UTM_Banner_ppForm .btns {
-            position: absolute;
-            right: 4px;
-            border-radius: 50px;
-            background: #fe5a04;
-            color: #fff;
-            font-size: 14px;
-            top: 3px;
-            height: 36px;
-            padding: 1px 12px;
-            outline: 0;
-            border: 0;
-        }
-
-        .close_UTM_Banner_ppForm .btns img {
-            position: relative;
-            top: 1px;
-        }
-
-        p.error_UTM_Banner_Msgs {
-            color: #f00;
-            font-size: 12px;
-            padding-top: 2px;
-            letter-spacing: 0.5px;
-            position: absolute;
-            display: none;
-        }
-
-        .call_UTM_Banner_NowpMain p {
-            line-height: 15px;
-        }
-
-        .div_UTM_Banner_CallBackProgreessHome {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            top: -80px;
-            left: 0px;
-            z-index: 99;
-            text-align: center;
-            color: #000;
-            padding: 10px;
-            padding-top: 1px;
-            line-height: 25px;
-            border: 1px solid #ccc;
-            background: #c9f5f6;
-            margin-top: 10px;
-        }
-
-        .confirmation_UTM_Banner_Popup {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            top: 0px;
-            left: 0px;
-            z-index: 99;
-            text-align: center;
-            padding: 10px 25px;
-            padding-top: 10px;
-            border: 1px solid #ccc;
-            background: #c9f5f6;
-            margin-top: 10px;
-        }
-
-        #cb_UTM_Banner_Number {
-            color: #d90001;
-            font-weight: bold;
-        }
-
-        .confirmation_UTM_Banner_Popup#confirmation_UTM_Banner_Popup b {
-            font-size: 14px;
-            font-weight: 400;
-            padding-top: 20px;
-            display: block;
-        }
-
-        .confirmation_UTM_Banner_Popup#confirmation_UTM_Banner_Popup p {
-            font-size: 14px;
-            color: #000;
-        }
-
-        .btn_UTM_Banner_Holder button {
-            background: #333;
-            padding: 8px 25px;
-            color: #fff;
-            cursor: pointer;
-            border-radius: 0;
-            border: 0;
-            font-weight: 400;
-            font-size: 17px;
-            margin: 13px 6px 0 6px;
-        }
-
-        a.close_UTM_Banner_CallPopupConfirm {
-            position: absolute;
-            right: 0;
-            top: 4px;
-            width: 22px;
-            height: 22px;
-        }
-
-        a.close_UTM_Banner_CallPopupConfirm:after,
-        a.close_UTM_Banner_CallPopupConfirm:before {
-            content: '';
-            width: 1px;
-            height: 12px;
-            position: absolute;
-            left: 10px;
-            top: 5px;
-            background: #000;
-            transform: rotate(45deg);
-        }
-
-        a.close_UTM_Banner_CallPopupConfirm:after {
-            transform: rotate(-45deg);
-        }
-
-        a.close_UTM_Banner_CallPopupHome {
-            position: absolute;
-            right: 0;
-            top: 4px;
-            width: 22px;
-            height: 22px;
-        }
-
-        a.close_UTM_Banner_CallPopupHome:after,
-        a.close_UTM_Banner_CallPopupHome:before {
-            content: '';
-            width: 1px;
-            height: 12px;
-            position: absolute;
-            left: 10px;
-            top: 5px;
-            background: #000;
-            transform: rotate(45deg);
-        }
-
-        a.close_UTM_Banner_CallPopupHome:after {
-            transform: rotate(-45deg);
-        }
-
-        .disc_UTM_Banner_laimer {
-            color: #000;
-            font-size: 11px;
-            padding-top: 6px;
-            line-height: 15px;
-        }
-
-        p.calfivesec {
-            font-size: 13px;
-            font-weight: 600;
-            padding-top: 12px;
-            margin-bottom: 0;
-        }
-
-        p.calfivesec span {
-            font-size: 12px;
-            font-weight: 500;
-        }
-
-        .orali span {
-            border: 1px solid #ccc;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            display: inline-block;
-            line-height: 28px;
-            color: #333;
-            margin-top: 6px;
-        }
-
-        .orali span {
-            border: 1px solid #ccc;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            display: inline-block;
-            line-height: 28px;
-            color: #333;
-            margin-top: 6px;
-        }
-
-        @media screen and (max-width: 375px) {
-            .gamainCover {
-                padding-top: 0;
-            }
-            .airlinerLogo img {
-                height: 52px;
-                object-fit: contain;
-            }
-            .greatAirfarespopUp .girlCalling1 {
-                margin-top: 0;
-            }
-            .greatAirfarespopUp .girlCalling1 img {
-                width: 67px;
-            }
-            .pohlp {
-                display: none;
-            }
-            .div_UTM_Banner_CallBackProgreessHome,
-            .confirmation_UTM_Banner_Popup {
-                margin-top: -20px;
-            }
-            .div_UTM_Banner_CallBackProgreessHome {
-                margin-top: -38px !important;
-            }
-            .gamainPoup h3 {
-                margin-top: 5px;
-            }
-            .flightImage img {
-                top: 35px;
-            }
-            .flightImage {
-                min-height: 177px;
-            }
-            .callicons h4 a {
-                font-size: 24px;
-            }
-        }
-    </style>
     <style>
         /**** new Design popup****/
 
@@ -2432,45 +1971,8 @@ We understand that emergencies and spontaneous trips happen. That's why our flex
         }
     </style>
 
-<div class="greatAirfarespopUp" id="boxes">
-    <button class="closePopup" onclick="closePopup()">
-        <i class="fa fa-times"></i>
-    </button>
-    <div class="gamainCover">
-        <div class="gamainPoup">
-            <!-- Your existing popup content -->
-            <div class="whole-banner-clickable">
-                <a href="tel:(888) 501-0180" class="wholeClickable"></a>
-                <div class="gAcontent">
-                    <h2>Airlines Reservations and Bookings</h2>
-                    <div class="airlinerLogo"><img id="utmpopupSmalllogo" src="images/Airline-Ticket.png" alt="Cheap"></div>
-                    <a href="tel:(888) 501-0180" class="svnSpt">24/7 Reservations & Support</a>
-                    <div class="usplst">
-                        <div>New Booking</div>
-                        <div>Changes</div>
-                        <div>Cancellation</div>
-                        <div>Customer Service</div>
-                        <a href="tel:(888) 501-0180" class="svnSpt">&nbsp;</a>
-                    </div>
-                    <div class="flightImage">
-                        <img id="utmpopuplogo" src="images/airline-gnric-pullu.png">
-                    </div>
-                    <div class="girlCalling1">
-                        <img src="images/calling-cus.png">
-                    </div>
-                    <p class="callTxt">No Hold - Call Answered in 5 Sec</p>
-                    <div class="callicons post">
-                        <a href="tel:(888) 501-0180" class="circlePhone"></a>
-                        <h4>
-                            <a href="tel:(888) 501-0180">(888) 501-0180</a>
-                        </h4>
-                    </div>
-                    <p class="pohlp"><a href="tel:(888) 501-0180">24/7 Helpline</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
+
     <script>
         function myFunction1() {
             var x = document.getElementById("boxes");
@@ -2830,8 +2332,7 @@ We understand that emergencies and spontaneous trips happen. That's why our flex
                 <div class="col-md-12">
                     <div class="ftr_bx">
                         <h4>Disclaimer </h4>
-                        <p>Airlines Fare Finder is a travel reservations portal in the United States. We don't have any subsidiary or sister company. We are working as independent travel agents to sell travel products and services. Our company is not responsible
-                            for any kind of loss or damage by using this website or by browsing the Airlines Fare Finder.</p>
+                        <p> Expeidea Travel is a travel reservations portal based in the United States. We operate independently and are not affiliated with any subsidiary or sister company. As independent travel agents, we offer travel products and services from various third-party providers. Expeidea Travel is not responsible for any loss or damage that may occur from the use of this website or while browsing our services.</p>
                     </div>
                 </div>
 
@@ -2860,13 +2361,262 @@ We understand that emergencies and spontaneous trips happen. That's why our flex
 
     <div class="footer_btm">Copyright © 2024 Expeideatravel.com is a unit of ExpeideaTravel LLC. All Rights Reserved</div>
 
-
+    <div id="boxes" class="col-sm-6 col-sm-offset-3">
+        <a href="tel:+1-888-402-4996">
+           <div class="d-block d-md-block d-lg-none">
+              <div class="modal fade show custompopup" style="display: block;">
+                 <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content pt-0">
+                       <div class="modal-footer border-0">
+                           <p  onclick="myFunction1()" class="btn-secondary">
+                           <i class="fa fa-close " aria-hidden="true"></i></p>
+                           
+                           </div>
+                       <div class="popup-content">
+                          <img alt="Logo" class="header-logo" loading="lazy" width="120" height="40" decoding="async" data-nimg="1" style="color:transparent" src="images/expedia.png">
+                          <p>Talk to a travel expert and Save 25%</p>
+                          <h2 class="support-no">
+                             <i class="fas fa-headset"></i> <!-- -->+1-888-402-4996<!-- --> 
+                          </h2>
+                          <hr>
+                          <h5>24/7 Reservation Support</h5>
+                          <div class="row justify-content-center">
+                             <div class="col-6 align-self-center"><img alt="Logo" class="" loading="lazy" width="50" height="50" decoding="async" data-nimg="1" style="color:transparent;width:100%;height:auto" sizes="100vw" src="images/left-man.jpg"></div>
+                             <div class="col-6">
+                                <ul class="arrow-list">
+                                   <li>Tickets Booking</li>
+                                   <li>Manage Booking</li>
+                                   <li>Customer Service</li>
+                                   <li>Cancellation</li>
+                                </ul>
+                             </div>
+                             <div class="mt-3 call-offers">
+                                 <img src="images/cal2.gif" style="width:50px; height:50px">
+                                <div>
+                                   <p class="mb-0">Call Us &amp; get Upto <small>40%OFF</small> on Flights</p>
+                                   <h4 class="mb-0">+1-888-402-4996</h4>
+                                </div>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </a>
+         </div>
+        
 
 
 
 
 </html>
 
+<style>
+    .d-lg-none {
+          display: none !important;
+      }  
+      
+      #boxes{ display:none;}
+      
+       .modal.fade.show {
+          opacity: 1;
+          padding: 0 !important;
+          overflow: unset;
+          background: rgba(0, 0, 0, .85);
+          text-align: center;    z-index: 9999999999;
+      }   
+  .popup-content {
+      background-color: #fff;
+      margin: 6% auto;
+      padding: 8px;
+      border: 1px solid #00185e;
+      width: 96%;
+      max-width: 375px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+      border-radius: 8px;
+      text-align: center;
+  }
+  .custompopup .modal-footer.border-0 {
+      margin-top: 0px;
+  }
+  
+  .border-0 {
+      border: 0 !important;
+  }
+  .modal-footer {
+      display: flex;
+      flex-shrink: 0;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+      padding: calc(var(--bs-modal-padding) - var(--bs-modal-footer-gap)* .5);
+      background-color: var(--bs-modal-footer-bg);
+      border-top: var(--bs-modal-footer-border-width) solid var(--bs-modal-footer-border-color);
+      border-bottom-right-radius: var(--bs-modal-inner-border-radius);
+      border-bottom-left-radius: var(--bs-modal-inner-border-radius);
+  }
+  .pt-0 {
+      padding-top: 0 !important;
+  }
+  
+  .modal-content {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      color: var(--bs-modal-color);
+      pointer-events: auto;
+      background-color: var(--bs-modal-bg);
+      background-clip: padding-box;
+      border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
+      border-radius: var(--bs-modal-border-radius);
+      outline: 0;
+  }
+  .modal-content {
+      background: hsla(0, 0%, 100%, 0) !important;
+  }
+  .modal.show .modal-dialog {
+      transform: none;
+  }
+  .modal.fade .modal-dialog {
+      transition: transform .3s ease-out;
+      transform: translateY(-50px);
+  }
+  @media (max-width: 767px) {
+      .modal.show .modal-dialog {
+          margin: 0;
+      }
+  }
+  .modal-dialog-centered {
+      display: flex;
+      align-items: center;
+      min-height: calc(100% - var(--bs-modal-margin)* 2);
+  }
+  .modal-dialog {
+      position: relative;
+      width: auto;
+      margin: var(--bs-modal-margin);
+      pointer-events: none;
+  }
+  
+  .header-logo {
+      width: auto;
+      margin-bottom: 20px;
+      margin-left: 40px;
+      margin-top: 10px;
+  }
+  .support-no {
+      font-size: 32px;
+      font-weight: 700;
+      color: #ff5722;
+  }
+  hr {
+      width: 100%;
+      height: 3px !important;
+      color: #da552f !important;
+     
+      margin-top: 0 !important;
+      margin: 1rem 0;
+     
+      border: 0;
+      border-top: var(--bs-border-width) solid;
+      opacity: .25;
+  }
+  .justify-content-center {
+      justify-content: center !important;
+  }
+  
+  .row {
+      --bs-gutter-x: 1.5rem;
+      --bs-gutter-y: 0;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: calc(-1* var(--bs-gutter-y));
+      margin-right: calc(-.5* var(--bs-gutter-x));
+      margin-left: calc(-.5* var(--bs-gutter-x));
+  }
+  .align-self-center {
+      align-self: center !important;
+  }
+  .arrow-list {
+      list-style-type: none;
+      padding: 0;
+      text-align: left;
+      font-weight: 500;
+  }
+  .arrow-list li, .arrow-list li:hover {
+      background: linear-gradient(90deg, #4d8cff, #fff);
+  }
+  
+  .arrow-list li {
+      position: relative;
+      color: #00185e;
+      padding: 1px 0 0 7px !important;
+      margin: 12px 0 !important;
+      cursor: pointer;
+      transition: background .3s;
+      border-radius: 12px 0;
+      
+      font-size: 16px;
+      line-height: 1.9;
+      font-weight: 400;
+  }
+  .call-offers {
+      width: 92%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background: #00308D;
+      padding: 10px 15px;
+      border-radius: 5px;
+      color: #fff;
+      text-align: left;
+      margin-top: 12px;
+  }
+  .call-offers h4 {
+      font-size: 24px;
+  }
+  p.mb-0 {
+      font-size: 13px;
+  }
+  p.mb-0 small {
+      color: #fff;
+      background-color: #0f4ab5;
+      border-radius: 5px;
+      padding: 3px;
+      font-weight: 400;
+      letter-spacing: 1px;
+  }
+  .custompopup h4 {
+      margin-top: 10px;
+      color: #fff;
+      font-size: 25px;
+      line-height: 30px;
+      font-weight: 700;
+  }
+  
+  @media (min-width:320px) and (max-width:767px){
+      .d-block {display: block !important;}
+   .btn-secondary {
+          font-size: 14px;
+          font-weight: 600;
+          border-radius: 20px;
+          background: rgba(0, 74, 173, 0) !important;
+          color: #ed942d !important;
+          border: 0;
+          padding: 10px 30px !important;
+          right: -3px !important;
+          position: relative !important;
+          top: 79px !important;
+          border: none !important;
+      }   
+      
+     #boxes{ display:block;} 
+      
+  }    
+      
+  </style>
 <script>
     //IIFE
     (function() {
@@ -2950,7 +2700,7 @@ We understand that emergencies and spontaneous trips happen. That's why our flex
     })();
 </script>
 
-<style>
+<!-- <style>
     .closePopup {
         position: absolute;
         top: 10px;
@@ -2971,11 +2721,11 @@ We understand that emergencies and spontaneous trips happen. That's why our flex
     .closePopup:hover {
         color: #f00; /* Optional hover effect */
     }
-</style>
+</style> -->
 
-<script>
+<!-- <script>
     function closePopup() {
         var popup = document.getElementById("boxes");
         popup.style.display = "none";
     }
-</script>
+</script> -->
