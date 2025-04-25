@@ -2601,7 +2601,7 @@
       }
       .modal.fade .modal-dialog {
           transition: transform .3s ease-out;
-          transform: translateY(-50px);
+          transform: translateY(91px);
       }
       @media (max-width: 767px) {
           .modal.show .modal-dialog {
@@ -3276,6 +3276,33 @@ Las Vegas, NV 89144, USA
         popup.style.display = "none";
     }
 </script>
+<script>
+    // Function to check if the user is on a mobile device
+    function isMobileDevice() {
+        return window.innerWidth <= 767; // Adjust breakpoint as needed
+    }
+
+    // Function to show the popup after 15 seconds on mobile devices
+    function showPopupAfterDelay() {
+        if (isMobileDevice()) {
+            setTimeout(function () {
+                var popup = document.getElementById("boxes");
+                if (popup) {
+                    popup.style.display = "block";
+                }
+            }, 15000); // 15 seconds delay
+        }
+    }
+
+    // Call the function on page load
+    document.addEventListener("DOMContentLoaded", showPopupAfterDelay);
+</script>
+
+<style>
+    #boxes {
+        display: none; /* Initially hide the popup */
+    }
+</style>
 <script>
     const swiper = new Swiper(".mySwiper", {
       loop: true,
