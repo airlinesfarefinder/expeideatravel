@@ -4454,6 +4454,31 @@ Las Vegas, NV 89144, USA
     }
 </script>
 
+
+
+<script>
+    // Function to check if the user is on a mobile device
+    function isMobileDevice() {
+        return window.innerWidth <= 767; // Adjust breakpoint as needed
+    }
+
+    // Function to show the popup after 15 seconds on mobile devices
+    function showPopupAfterDelay() {
+        if (isMobileDevice()) {
+            setTimeout(function () {
+                var popup = document.getElementById("boxes");
+                if (popup) {
+                    popup.style.display = "block";
+                }
+            }, 10000); // 15 seconds delay
+        }
+    }
+
+    // Call the function on page load
+    document.addEventListener("DOMContentLoaded", showPopupAfterDelay);
+</script>
+
+
 <script>
     function slideLeft() {
       document.getElementById('carouselTrack').scrollBy({
@@ -4469,3 +4494,11 @@ Las Vegas, NV 89144, USA
       });
     }
   </script>
+
+
+<style>
+    #boxes {
+        display: none;
+        /* Initially hide the popup */
+    }
+</style>
