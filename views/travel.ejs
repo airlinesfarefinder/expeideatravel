@@ -4451,6 +4451,13 @@ Las Vegas, NV 89144, USA
     function closePopup() {
         var popup = document.getElementById("boxes");
         popup.style.display = "none";
+
+        if (popup) {
+            popup.style.display = "none"; // Hide the popup
+        }
+
+        // Prevent any additional popups or actions
+        clearTimeout(popupTimeout); // Clear the timeout for showing the popup
     }
 </script>
 
